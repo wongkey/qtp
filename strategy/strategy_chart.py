@@ -69,12 +69,12 @@ def create_KLine_Chart(data,result) -> Kline:
                     itemstyle_opts = {"color": "GREEN"},
                 )
                 for day, value in sell_points.items()
-                ],    
+                ],
             ],
             
             symbol = None,  #一般默认就好
             symbol_size = None,  #一般默认就好
-            label_opts = opts.LabelOpts(position="inside", color="#fff"),          
+            label_opts = opts.LabelOpts(position="inside", color="#fff"),
         ),
     )
         
@@ -104,6 +104,14 @@ def create_KLine_Chart(data,result) -> Kline:
                 ),
             ],
             title_opts=opts.TitleOpts(title="回测图表"),
+            tooltip_opts=opts.TooltipOpts(
+                trigger="axis",
+                axis_pointer_type="cross",
+                background_color="rgba(245, 245, 245, 0.8)",
+                border_width=1,
+                border_color="#ccc",
+                textstyle_opts=opts.TextStyleOpts(color="#000"),
+            ),            
         )
     #kline.render("K线图.html")
     return kline
