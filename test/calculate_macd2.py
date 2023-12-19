@@ -24,7 +24,7 @@ def calculate_macd(data, short_period=12, long_period=26, signal_period=9):
     macd = ema_short - ema_long
     signal = macd.ewm(span=signal_period, adjust=False).mean()
     
-    macd_data = pd.DataFrame({'TimeKey': data['TimeKey'], 'Symbol': data['Symbol'], 'MACD': macd, 'Signal': signal})
+    macd_data = pd.DataFrame({'TimeKey': data['TimeKey'], 'Symbol': data['Symbol'], 'DIF': macd, 'DEA': signal})
     return macd_data
 
 '''
@@ -47,8 +47,6 @@ hostname = "localhost"
 dbname = "qtp"
 uname = "root"
 pwd = "ASDFqwer1234"
-
-
 
 engine = create_engine('mysql+pymysql://root:ASDFqwer1234@localhost/qtp')
 conn = engine.connect()

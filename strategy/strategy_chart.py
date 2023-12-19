@@ -1,5 +1,5 @@
 from pyecharts import options as opts
-from pyecharts.charts import Kline,Page,Grid,Bar
+from pyecharts.charts import Kline,Page,Grid,Bar,Line
 from pyecharts.components import Table
 from pyecharts.faker import Faker
 from pyecharts.globals import ThemeType
@@ -26,7 +26,7 @@ def create_KLine_Chart(data,result) -> Kline:
     buy_points = dict(zip(buy_points['date'], buy_points['fill_price']))
     sell_points = dict(zip(sell_points['date'], sell_points['fill_price']))
         
-    kline = Kline(init_opts=opts.InitOpts(width='100%',height='700px'))
+    kline = Kline(init_opts=opts.InitOpts(width='100%',height='400px'))
 
     kline.add_xaxis(xdf.index.strftime('%Y%m%d').tolist())
     kline.add_yaxis("kline", 
@@ -114,8 +114,29 @@ def create_KLine_Chart(data,result) -> Kline:
             ),            
         )
     #kline.render("K线图.html")
+    #kline.overlap(create_MACD_Chart(data,result))
     return kline
 
+def create_MACD_Chart(data,result) -> Line:
+    xdf=data[['date']]
+    xdf.index=pd.to_datetime(xdf.date)
+    ydf_dif=data[['DIF']]
+    ydf_dea=data[['DEA']]
+    
+    line = (
+        Line()
+        .add_xaxis(xdf.index.strftime('%Y%m%d').tolist())
+        .add_yaxis("DIF", 
+            y_axis=ydf_dif.values.tolist()
+        )
+        .add_yaxis("DEA", 
+            y_axis=ydf_dea.values.tolist()
+        )
+        .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
+    )
+    return line
+    
+    
 def create_strategy_bar(data,result) -> Bar:
     xdf=data[['date']]
     xdf.index=pd.to_datetime(xdf.date)
@@ -208,23 +229,30 @@ def create_strategy_charts(df,result):
     grid_chart = Grid(
         init_opts=opts.InitOpts(
             width="100%",
-            height="800px",
+            height="1000px",
             animation_opts=opts.AnimationOpts(animation=False),
         )
     )
     grid_chart.add(
         create_KLine_Chart(df,result),
-        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", height="50%"),
+        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", height="400px"),
     )
 
     grid_chart.add(
-        create_strategy_bar(df,result),
-        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="63%", height="16%"),
+        create_MACD_Chart(df,result),
+        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="500px", height="200px"),
     )
     
+#    grid_chart.add(
+#        create_strategy_bar(df,result),
+#        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="800px", height="200px"),
+#    )
+
     page = Page(layout=Page.DraggablePageLayout)
     page.add(
         grid_chart,
+        create_strategy_bar(df,result),
         create_strategy_info(result),
     )
+    
     page.render("K线图.html")

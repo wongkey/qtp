@@ -43,3 +43,14 @@ def buy_with_indicator(ctx):
     if ctx.indicator('cmma_20')[-1] < 0:
         ctx.buy_shares = ctx.calc_target_shares(1)
         ctx.hold_bars = 3
+        
+def buy_with_macd(ctx):
+    if ctx.DIF[-1] > 0 and ctx.DEA[-1] > 0:
+        ctx.buy_shares = ctx.calc_target_shares(1)
+    if ctx.DEA[-1] < 0 and ctx.DEA[-1] < 0:
+        ctx.sell_all_shares()
+        
+    #if ctx.indicator('macd_dif') > 0 and ctx.indicator('macd_dea') > 0:
+    #    ctx.buy_shares = ctx.calc_target_shares(1)
+    #if ctx.indicator('macd_dif') < 0 and ctx.indicator('macd_dea') < 0:
+    #    ctx.sell_all_shares()
