@@ -1,9 +1,20 @@
-1、安装python 3.11 (最新pybroker目前不支持3.12及以上版本)
+1、安装python 3.10 (最新pybroker目前不支持3.12及以上版本)
+   ta-lib 只支持到python 3.10,不支持3.11及以上版本 
+     安装包在setup文件夹中
+     
+2、安装ta-lib
+   2.1 ta-lib远程安装有问题，需进行本地安装，
+   2.2 将setup文件夹中的 TA_Lib-0.4.24-cp310-cp310-win_amd64.whl 拷贝到本地D盘
+   2.3 pip install D:\software\TA_Lib-0.4.24-cp310-cp310-win_amd64.whl
+   
+3、安装pybroker
 
-2、安装pybroker
+   pip install -U lib-pybroker
 
-pip install -U lib-pybroker
+4、安装PyMySQL
+   pip install PyMySQL
+   pip install SQLAlchemy
 
-3、安装pyecharts
+5、安装pyecharts
 
-pip install pyecharts -U
+   pip install pyecharts -U

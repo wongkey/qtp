@@ -1,7 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+图表函数
+"""
+
 from pyecharts import options as opts
 from pyecharts.charts import Kline,Page,Grid,Bar,Line
 from pyecharts.components import Table
-from pyecharts.faker import Faker
 from pyecharts.globals import ThemeType
 
 import pandas as pd
@@ -120,16 +124,16 @@ def create_KLine_Chart(data,result) -> Kline:
 def create_MACD_Chart(data,result) -> Line:
     xdf=data[['date']]
     xdf.index=pd.to_datetime(xdf.date)
-    ydf_dif=data[['DIF']]
-    ydf_dea=data[['DEA']]
+    ydf_dif=data[['macd']]
+    ydf_dea=data[['macdsignal']]
     
     line = (
         Line()
         .add_xaxis(xdf.index.strftime('%Y%m%d').tolist())
-        .add_yaxis("DIF", 
+        .add_yaxis("macd", 
             y_axis=ydf_dif.values.tolist()
         )
-        .add_yaxis("DEA", 
+        .add_yaxis("macdsignal", 
             y_axis=ydf_dea.values.tolist()
         )
         .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
@@ -225,6 +229,62 @@ def create_strategy_info(result) -> Table:
     )
     return table
 
+def create_strategy_orders(result) -> Table:
+    table = Table()
+    
+    metrics = result.orders
+    
+    headers = metrics.columns.tolist()
+    rows = [list(row) for row in metrics.values]
+    #print(headers)
+    #print(rows)
+    table.add(headers, rows).set_global_opts(
+        title_opts=opts.ComponentTitleOpts(title="订单")
+    )
+    return table
+
+def create_strategy_positions(result) -> Table:
+    table = Table()
+    
+    metrics = result.positions
+    
+    headers = metrics.columns.tolist()
+    rows = [list(row) for row in metrics.values]
+    #print(headers)
+    #print(rows)
+    table.add(headers, rows).set_global_opts(
+        title_opts=opts.ComponentTitleOpts(title="持仓")
+    )
+    return table
+
+def create_strategy_portfolio(result) -> Table:
+    table = Table()
+    
+    metrics = result.portfolio
+    
+    headers = metrics.columns.tolist()
+    rows = [list(row) for row in metrics.values]
+    #print(headers)
+    #print(rows)
+    table.add(headers, rows).set_global_opts(
+        title_opts=opts.ComponentTitleOpts(title="投资组合")
+    )
+    return table
+
+def create_strategy_trades(result) -> Table:
+    table = Table()
+    
+    metrics = result.trades
+    
+    headers = metrics.columns.tolist()
+    rows = [list(row) for row in metrics.values]
+    #print(headers)
+    #print(rows)
+    table.add(headers, rows).set_global_opts(
+        title_opts=opts.ComponentTitleOpts(title="交易")
+    )
+    return table
+
 def create_strategy_charts(df,result):
     grid_chart = Grid(
         init_opts=opts.InitOpts(
@@ -253,6 +313,10 @@ def create_strategy_charts(df,result):
         grid_chart,
         create_strategy_bar(df,result),
         create_strategy_info(result),
+        create_strategy_orders(result),
+        create_strategy_positions(result),
+        #create_strategy_portfolio(result),
+        create_strategy_trades(result),
     )
     
     page.render("K线图.html")

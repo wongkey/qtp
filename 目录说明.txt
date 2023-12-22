@@ -1,0 +1,6 @@
+qtp.data 数据源
+qtp.indicator 指标
+qtp.strategy 策略
+qtp.test 测试文件
+qtp.venv 回测
+qtp.setup 安装文件
