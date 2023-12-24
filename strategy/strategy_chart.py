@@ -95,7 +95,7 @@ def create_KLine_Chart(data,result) -> Kline:
                     is_show=False,
                     type_="inside",
                     xaxis_index=[0, 1],
-                    range_start=98,
+                    range_start=0,
                     range_end=100,
                     ),
                 opts.DataZoomOpts(
@@ -103,7 +103,15 @@ def create_KLine_Chart(data,result) -> Kline:
                     xaxis_index=[0, 1],
                     type_="slider",
                     pos_top="85%",
-                    range_start=98,
+                    range_start=0,
+                    range_end=100,
+                ),
+                opts.DataZoomOpts(
+                    is_show=True,
+                    xaxis_index=[0, 1],
+                    type_="slider",
+                    pos_top="85%",
+                    range_start=0,
                     range_end=100,
                 ),
             ],
@@ -139,7 +147,21 @@ def create_MACD_Chart(data,result) -> Line:
         .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
     )
     return line
-    
+
+def create_MFI_Chart(data,result) -> Line:
+    xdf=data[['date']]
+    xdf.index=pd.to_datetime(xdf.date)
+    ydf_dif=data[['MFI']]
+        
+    line = (
+        Line()
+        .add_xaxis(xdf.index.strftime('%Y%m%d').tolist())
+        .add_yaxis("MFI", 
+            y_axis=ydf_dif.values.tolist()
+        )
+        .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
+    )
+    return line
     
 def create_strategy_bar(data,result) -> Bar:
     xdf=data[['date']]
@@ -295,12 +317,17 @@ def create_strategy_charts(df,result):
     )
     grid_chart.add(
         create_KLine_Chart(df,result),
-        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", height="400px"),
+        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", height="300px"),
     )
 
     grid_chart.add(
         create_MACD_Chart(df,result),
-        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="500px", height="200px"),
+        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="450px", height="150px"),
+    )
+
+    grid_chart.add(
+        create_MFI_Chart(df,result),
+        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="630px", height="150px"),
     )
     
 #    grid_chart.add(
