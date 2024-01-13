@@ -12,6 +12,7 @@ returnStr = response.read().decode("UTF-8")
 response.close();
 
 data = json.loads(returnStr)
+print(data)
 
 try:
     db = pymysql.connect(host="localhost",user="root",password="ASDFqwer1234",database="qtp")
@@ -22,9 +23,9 @@ except Exception as e:
     
 cursor = db.cursor()
 
-for item in data:
-    insertSql = "INSERT INTO `qtp`.`basic_data_stock_code`(`Symbol`,`StockName`,`Exchange`) VALUES ('" + str(item['dm']) + "','" + str(item['mc']) + "','" + str(item['jys']) + "');"
-    cursor.execute(insertSql)
+# for item in data:
+#    insertSql = "INSERT INTO `qtp`.`basic_data_stock_code`(`Symbol`,`StockName`,`Exchange`) VALUES ('" + str(item['dm']) + "','" + str(item['mc']) + "','" + str(item['jys']) + "');"
+#    cursor.execute(insertSql)
     # print(str(item['dm']) + " | " + str(item['mc']) + " | " + str(item['jys']))
 
 #print(response.read().decode("UTF-8"))
