@@ -72,7 +72,7 @@ def create_strategy():
     print('======查看投资组合==========================')
     print(result.portfolio)
     print('======查看交易==========================')
-    print(result.trades)    
+    print(result.trades)
 
     create_strategy_charts(data_with_indicator,result)
 
