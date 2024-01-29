@@ -1,16 +1,7 @@
 import schedule
 import time
-import pymysql
-import pandas as pd
-import sys
-from sqlalchemy import create_engine
-import pandas as pd
 import pybroker as pb
-from pybroker import Strategy
-from pybroker.ext.data import AKShare
-from strategy.strategy_content import buy_with_indicator
-from strategy.strategy_chart import create_strategy_charts
-from indicator.indicator_talib import calculate_indicator
+from sqlalchemy import create_engine
 from auto.stock_code import get_stock_data
 from auto.stock_history_data import get_stock_history_data
 
