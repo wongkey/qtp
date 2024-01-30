@@ -1,17 +1,23 @@
 import akshare as ak
 import pybroker as pb
 import pandas as pd
+import tushare as ts
 
-from sqlalchemy import create_engine, text
+from sqlalchemy import text
 
 def get_stock_history_data(engine):
     
     print("开始采集股票历史数据")
     conn = engine.connect()
-    sql = "SELECT * FROM basic_data_stock_code"
+    sql = "SELECT * FROM basic_data_stock_code_akshare WHERE Symbol IN ('000012','000333','000623','000756','000951')"
     df = pd.read_sql(text(sql), conn)
-
-    # 处理查询结果
+    
+    # 设置token
+    ts.set_token('7f82a7242ba2fc55404df6c2572ccec44d7425623961120f8fed6d6b')
+    # 初始化pro接口
+    pro = ts.pro_api()
+            
+    # 从akshare取股票历史数据
     for index,row in df.iterrows():
         try:
             # print("股票代码：",row['Symbol'])
@@ -26,5 +32,18 @@ def get_stock_history_data(engine):
             print(symbolCode, stockName, "数据采集异常", error)
         else:
             print(symbolCode, stockName,'采集完成')
-        
+
+    # 从tushare取股票历史数据
+    for index,row in df.iterrows():    
+        try:
+
+            # 获取日线数据
+            tushare_stock_data = pro.daily(ts_code='000001.sz', start_date='20180701', end_date='20180718')
+            tushare_stock_data.to_sql(name="basic_data_stock_code_tushare", con=conn, index=False ,if_exists='replace')
+        except Exception as error:
+            print(symbolCode, stockName, "数据采集异常", error)
+        else:
+            print(symbolCode, stockName,'采集完成')
+
     print("股票历史数据采集完成")
+    

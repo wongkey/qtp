@@ -1,15 +1,15 @@
 import pybroker as pb
 import pandas as pd
 
-from indicator_talib import calculate_indicator
+from auto.indicator_talib import calculate_indicator
 from pybroker import Strategy
-from sqlalchemy import create_engine, text
-from strategy_content import buy_with_indicator
+from sqlalchemy import text
+from auto.strategy_content import buy_with_indicator
 
 def execute_backtest(engine):
     print("开始回测")
     conn = engine.connect()
-    sql = "SELECT * FROM basic_data_stock_code"
+    sql = "SELECT * FROM basic_data_stock_code_akshare WHERE Symbol IN ('000012','000333','000623','000756','000951')"
     df = pd.read_sql(text(sql), conn)
     
     my_config = pb.StrategyConfig(initial_cash=500000)
@@ -162,30 +162,3 @@ def execute_backtest(engine):
             print(symbolCode, stockName,'回测完成')
                     
     print("回测完成")
-
-
-# 定义全局参数 "stock_code"（股票代码）
-pb.param(name='stock_code', value='600000') 
-# 定义全局参数 "start_date" 开始日期
-pb.param(name='start_date', value='20230101') 
-# 定义全局参数 "end_date" 结束日期
-pb.param(name='end_date', value='20231231') 
-    
-# 定义全局参数 "percent"（持仓百分比） 1代表100% 0.25代表25%
-pb.param(name='percent', value=0.25)
-# 定义全局参数 "stop_loss_pct"（止损百分比）
-pb.param(name='stop_loss_pct', value=10)
-# 定义全局参数 "stop_profit_pct"（止盈百分比）
-pb.param(name='stop_profit_pct', value=10)
-
-# 创建策略配置，初始资金为 500000
-my_config = pb.StrategyConfig(initial_cash=500000)
-
-
-#数据库连接参数
-hostname = "localhost" #数据库IP
-dbname = "qtp" #数据库名
-uname = "root" #用户名
-pwd = "ASDFqwer1234" #密码    
-engine = create_engine('mysql+pymysql://' + uname + ':' + pwd + '@' + hostname + '/' + dbname + '')
-execute_backtest(engine)
