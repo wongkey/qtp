@@ -8,7 +8,7 @@ from auto.stock_history_data import get_stock_history_data
 from auto.backtest import execute_backtest
 
 #自动启动时间
-startTime = "19:33"
+startTime = "20:55"
 
 #数据库连接参数
 hostname = "localhost" #数据库IP
