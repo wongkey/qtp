@@ -11,10 +11,13 @@
 
    pip install -U lib-pybroker
 
-4、安装PyMySQL
+4、安装tushare
+   pip install tushare
+
+5、安装PyMySQL
    pip install PyMySQL
    pip install SQLAlchemy
 
-5、安装pyecharts
+6、安装pyecharts
 
    pip install pyecharts -U

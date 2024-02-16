@@ -1,18 +1,29 @@
 import pybroker as pb
 import pandas as pd
+import traceback
 
 from auto.indicator_talib import calculate_indicator
 from pybroker import Strategy
 from sqlalchemy import text
 from auto.strategy_content import buy_with_indicator
+from auto.strategy_chart import create_strategy_charts
 
 def execute_backtest(engine):
     print("开始回测")
+    
+    backtest_symbol = pb.param(name='backtest_symbol')
+    backtest_start_date = pb.param(name='backtest_start_date')
+    backtest_end_date = pb.param(name='backtest_end_date')
+    initial_cash_value = int(pb.param(name='initial_cash'))
+    
+    print('initial_cash_value:', initial_cash_value)
+    
     conn = engine.connect()
-    sql = "SELECT * FROM basic_data_stock_code_akshare WHERE Symbol IN ('000012','000333','000623','000756','000951')"
+    sql = f"SELECT * FROM basic_data_stock_code_akshare WHERE Symbol IN ({backtest_symbol})"
     df = pd.read_sql(text(sql), conn)
     
-    my_config = pb.StrategyConfig(initial_cash=500000)
+    #初始资金
+    my_config = pb.StrategyConfig(initial_cash=initial_cash_value)
     
     # 处理查询结果
     for index,row in df.iterrows():
@@ -20,7 +31,10 @@ def execute_backtest(engine):
             symbolCode = row['Symbol']
             stockName = row['StockName']
             
-            sql = "SELECT * FROM basic_data_stock_history WHERE symbol='" + symbolCode + "' order by date"
+            pageName = symbolCode + " " +  stockName
+            
+            sql = f"SELECT * FROM basic_stock_history_day_hfq_akshare WHERE symbol='{symbolCode}' AND date BETWEEN '{backtest_start_date}' AND '{backtest_end_date}' ORDER BY date"
+            print(sql)
             df = pd.read_sql(text(sql), conn)
             
             data_with_indicator = calculate_indicator(df)
@@ -34,13 +48,11 @@ def execute_backtest(engine):
             pb.register_columns('macdsignal')
             pb.register_columns('macdhist')
             
-            
             '''MFI指标'''
             pb.register_columns('MFI')
             
-            
             #创建策略
-            strategy = Strategy(data_with_indicator, start_date=pb.param(name='start_date'), end_date=pb.param(name='end_date'), config=my_config)
+            strategy = Strategy(data_with_indicator, start_date=backtest_start_date, end_date=backtest_end_date, config=my_config)
 
             #配置策略执行参数
             strategy.add_execution(buy_with_indicator, symbols=[symbolCode])
@@ -141,24 +153,28 @@ def execute_backtest(engine):
                               + ", " + str(std_error) + ")")
                 
             conn.execute(insertsql)
-                        
+            conn.commit()
+            
             return_order_df = result.orders
             return_order_df.to_sql(name="return_order", con=conn, index=False ,if_exists='append')
+            conn.commit()
             
             return_positions_df = result.positions
             return_positions_df.to_sql(name="return_positions", con=conn, index=False ,if_exists='append')
+            conn.commit()
             
             return_portfolio_df = result.portfolio
             return_portfolio_df.to_sql(name="return_portfolio", con=conn, index=False ,if_exists='append')
+            conn.commit()
             
             return_trades_df = result.trades
             return_trades_df.to_sql(name="return_trades", con=conn, index=False ,if_exists='append')
-            
             conn.commit()
             
+            #创建图表
+            create_strategy_charts(data_with_indicator,result,pageName)
+            
         except Exception as error:
-            print(symbolCode, stockName, "回测异常", error)
+            print(symbolCode, stockName, "回测异常", traceback.print_exc(), " : ", error)
         else:
             print(symbolCode, stockName,'回测完成')
-                    
-    print("回测完成")

@@ -13,6 +13,27 @@ def calculate_indicator(df) :
 
     df['MFI'] = talib.MFI(df.high, df.low, df.close, df.volume, timeperiod=14) 
     
+    # CCI 性质:自身带有一个crossover的属性，此刻因为除以了std，因此不仅符号有意义，信号本身的数值也有意义了。
+    # 正常情况下这个数字在正负100之间波动。
+    df['CCI'] = talib.CCI(df.high, df.low, df.close, timeperiod=14)
+    
+    # ROC 代表当前收盘价比之前的收盘价高百分比多少
+    # 当N-day ROC 是正的时候，买入
+    # 当ROC是负的时候，卖出
+    df['ROC'] = talib.ROC(df.close, timeperiod=14)
+    
+    # RSI 如果RIS（timeperiod=14），超过70则买超，当低于30则卖超；
+    # 当RSI（timeperiod=4），则超过75是超买，低于25时超卖。如果出现市场新高，但是RSI出现背离，那么就是一个reversal signal。
+    df['RSI'] = talib.RSI(df.close, timeperiod=14)
+    
+    #RSI + OBV
+    
+    # OBV
+    df['OBV'] = talib.OBV(df.close, df.volume)
+    
+    #ATR
+    df['ATR'] = talib.ATR(df.high, df.low, df.close, timeperiod=14)
+    
     return df
     
 '''
