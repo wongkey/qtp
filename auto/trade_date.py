@@ -11,13 +11,13 @@ def get_trade_date(engine):
         
         ts.set_token(pb.param(name='tushare_token'))
         
-        first_processing_date = pb.param(name='first_processing_date')
-        last_processing_date = pb.param(name='last_processing_date')
+        update_data_start_date = pb.param(name='update_data_start_date')
+        update_data_end_date = pb.param(name='update_data_end_date')
         
         #tushare初始化
         pro = ts.pro_api()
         #查询当前所有正常上市交易的股票列表
-        tushare_trade_date = pro.trade_cal(exchange='', start_date=first_processing_date, end_date=last_processing_date)
+        tushare_trade_date = pro.trade_cal(exchange='', start_date=update_data_start_date, end_date=update_data_end_date)
         tushare_trade_date.to_sql(name="basic_trade_date_tushare", con=conn, index=False ,if_exists='append')
         
         conn.commit()
