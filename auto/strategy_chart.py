@@ -4,10 +4,11 @@
 """
 
 from pyecharts import options as opts
-from pyecharts.charts import Kline,Page,Grid,Bar,Line
+from pyecharts.charts import Kline,Page,Grid,Bar,Line,Tab
 from pyecharts.components import Table
 from pyecharts.globals import ThemeType
-
+from sqlalchemy import create_engine,text
+from pyecharts.faker import Faker
 import pandas as pd
 
 def create_KLine_Chart(data,result) -> Kline:
@@ -129,121 +130,24 @@ def create_KLine_Chart(data,result) -> Kline:
     #kline.overlap(create_MACD_Chart(data,result))
     return kline
 
-def create_MACD_Chart(data,result) -> Line:
-    xdf=data[['date']]
-    xdf.index=pd.to_datetime(xdf.date)
-    ydf_dif=data[['macd']]
-    ydf_dea=data[['macdsignal']]
-    
-    line = (
-        Line()
-        .add_xaxis(xdf.index.strftime('%Y%m%d').tolist())
-        .add_yaxis("macd", 
-            y_axis=ydf_dif.values.tolist()
-        )
-        .add_yaxis("macdsignal", 
-            y_axis=ydf_dea.values.tolist()
-        )
-        .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
-    )
-    return line
-
-def create_MFI_Chart(data,result) -> Line:
-    xdf=data[['date']]
-    xdf.index=pd.to_datetime(xdf.date)
-    ydf_dif=data[['MFI']]
-        
-    line = (
-        Line()
-        .add_xaxis(xdf.index.strftime('%Y%m%d').tolist())
-        .add_yaxis("MFI", 
-            y_axis=ydf_dif.values.tolist()
-        )
-        .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
-    )
-    return line
-    
-def create_strategy_bar(data,result) -> Bar:
-    xdf=data[['date']]
-    xdf.index=pd.to_datetime(xdf.date)
-    
-#    all_points = result.portfolio[['date','cash','equity','pnl']]
-#    all_points['date'] = pd.to_datetime(all_points['date'], unit='s').dt.strftime('%Y%m%d')
-#    all_points = dict(zip(all_points['date'], all_points['cash']))
-    
-    ydf=result.portfolio[['pnl']]
-    
-#    y=[88, 102, 47, 107, 130, 31, 58]
-
-    buy_points = {"周二": 0, "周三": 100}
-
-    bar = Bar(init_opts=opts.InitOpts(theme=ThemeType.DARK))
-    bar.add_xaxis(xdf.index.strftime('%Y%m%d').tolist())
-    bar.add_yaxis(
-            "收益(Profit & Loss)",
-            ydf.pnl.tolist(),
-            # MarkPointOpts：标记点配置项
-            markpoint_opts=opts.MarkPointOpts(
-                # 标记点数据
-                data=[
-                    *[
-                    # MarkPointItem：标记点数据项
-                    opts.MarkPointItem(
-                         # 标注名称
-                        name="自定义标记点", 
-                        type_ = None,
-                        value_index = None,
-                        value_dim = None,
-                        coord=[day,value], #这里是直角坐标系x轴第三个，y轴第三个
-                        value=value,
-                        x = None,  #一般默认就好
-                        y = None,  #一般默认就好
-                        symbol = None,  #一般默认就好
-                        symbol_size = None,  #一般默认就好
-                        itemstyle_opts = None,
-                    )
-                    for day, value in buy_points.items()
-                    ],
-                ],
-                
-                symbol = None,  #一般默认就好
-                symbol_size = None,  #一般默认就好
-                label_opts = opts.LabelOpts(position="inside", color="#fff"),          
-            ),
-        )
-    #bar.add_yaxis("商家B", Faker.values())
-    bar.set_global_opts(
-        title_opts=opts.TitleOpts(title=""),
-        legend_opts=opts.LegendOpts(
-            type_='plain',
-            selected_mode=True,
-            is_show=False,
-            pos_left=None,
-            pos_right=None,
-            pos_top=None,
-            pos_bottom=None,
-            orient='horizontal',
-            align='auto',
-            padding=5,
-            item_gap=10,
-            item_width=25,
-            item_height=14,
-            inactive_color='#ccc',
-            textstyle_opts=None,
-            legend_icon=None
-        ), 
-    )
-    bar.set_series_opts(label_opts=opts.LabelOpts(is_show=False)) #不显示标签
-    #bar.render("bar_markpoint_custom.html")
-    return bar
-
-def create_strategy_info(result) -> Table:
+def create_strategy_info(infoName) -> Table:
     table = Table()
     
-    metrics = result.metrics_df.round(2)
+    #数据库连接参数
+    hostname = "localhost" #数据库IP
+    dbname = "qtp" #数据库名
+    uname = "root" #用户名
+    pwd = "ASDFqwer1234" #密码
+
+    engine = create_engine('mysql+pymysql://' + uname + ':' + pwd + '@' + hostname + '/' + dbname + '')
+
+    conn = engine.connect()
     
-    headers = metrics.columns.tolist()
-    rows = [list(row) for row in metrics.values]
+    sql = "SELECT * FROM " + infoName
+    df = pd.read_sql(text(sql), conn)
+    
+    headers = df.columns.tolist()
+    rows = [list(row) for row in df.values]
     #print(headers)
     #print(rows)
     table.add(headers, rows).set_global_opts(
@@ -251,100 +155,53 @@ def create_strategy_info(result) -> Table:
     )
     return table
 
-def create_strategy_orders(result) -> Table:
-    table = Table()
-    
-    metrics = result.orders
-    
-    headers = metrics.columns.tolist()
-    rows = [list(row) for row in metrics.values]
-    #print(headers)
-    #print(rows)
-    table.add(headers, rows).set_global_opts(
-        title_opts=opts.ComponentTitleOpts(title="订单")
+def create_data_history_grid(df,result) -> Grid:
+    line1 = (
+        Line()
+        .add_xaxis(Faker.choose())
+        .add_yaxis("A", Faker.values())
+        .add_yaxis("B", Faker.values())
     )
-    return table
 
-def create_strategy_positions(result) -> Table:
-    table = Table()
-    
-    metrics = result.positions
-    
-    headers = metrics.columns.tolist()
-    rows = [list(row) for row in metrics.values]
-    #print(headers)
-    #print(rows)
-    table.add(headers, rows).set_global_opts(
-        title_opts=opts.ComponentTitleOpts(title="持仓")
+    line2 = (
+        Line()
+        .add_xaxis(Faker.choose())
+        .add_yaxis("C", Faker.values())
+        .add_yaxis("D", Faker.values())
     )
-    return table
+    
+    line3 = (
+        Line()
+        .add_xaxis(Faker.choose())
+        .add_yaxis("E", Faker.values())
+        .add_yaxis("F", Faker.values())
+    )
 
-def create_strategy_portfolio(result) -> Table:
-    table = Table()
-    
-    metrics = result.portfolio
-    
-    headers = metrics.columns.tolist()
-    rows = [list(row) for row in metrics.values]
-    #print(headers)
-    #print(rows)
-    table.add(headers, rows).set_global_opts(
-        title_opts=opts.ComponentTitleOpts(title="投资组合")
+    line4 = (
+        Line()
+        .add_xaxis(Faker.choose())
+        .add_yaxis("G", Faker.values())
+        .add_yaxis("H", Faker.values())
     )
-    return table
 
-def create_strategy_trades(result) -> Table:
-    table = Table()
-    
-    metrics = result.trades
-    
-    headers = metrics.columns.tolist()
-    rows = [list(row) for row in metrics.values]
-    #print(headers)
-    #print(rows)
-    table.add(headers, rows).set_global_opts(
-        title_opts=opts.ComponentTitleOpts(title="交易")
+    grid = (
+        Grid(init_opts=opts.InitOpts(width="100%", height="800px"))
+        .add(create_KLine_Chart(df,result), grid_opts=opts.GridOpts(pos_left="5%", pos_right="55%", pos_top="10%", pos_bottom="50%"))
+        .add(line2, grid_opts=opts.GridOpts(pos_left="55%", pos_right="5%", pos_top="10%", pos_bottom="50%"))
+        .add(line3, grid_opts=opts.GridOpts(pos_left="5%", pos_right="55%", pos_top="60%", pos_bottom="5%"))
+        .add(line4, grid_opts=opts.GridOpts(pos_left="55%", pos_right="5%", pos_top="60%", pos_bottom="5%"))
     )
-    return table
+    return grid
 
 def create_strategy_charts(df,result,pageName):
-    grid_chart = Grid(
-        init_opts=opts.InitOpts(
-            width="100%",
-            height="1000px",
-            animation_opts=opts.AnimationOpts(animation=False),
-        )
-    )
-    grid_chart.add(
-        create_KLine_Chart(df,result),
-        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", height="300px"),
-    )
 
-    grid_chart.add(
-        create_MACD_Chart(df,result),
-        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="450px", height="150px"),
-    )
-
-    grid_chart.add(
-        create_MFI_Chart(df,result),
-        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="630px", height="150px"),
-    )
-    
-#    grid_chart.add(
-#        create_strategy_bar(df,result),
-#        grid_opts=opts.GridOpts(pos_left="5%", pos_right="5%", pos_top="800px", height="200px"),
-#    )
-
-    page = Page(layout=Page.DraggablePageLayout)
-    page.add(
-        grid_chart,
-        create_strategy_bar(df,result),
-        create_strategy_info(result),
-        create_strategy_orders(result),
-        create_strategy_positions(result),
-        #create_strategy_portfolio(result),
-        create_strategy_trades(result),
-    )
+    tab = Tab()
+    tab.add(create_strategy_info('return_metrics'), "回测绩效")
+    tab.add(create_strategy_info('return_order'), "订单")
+    tab.add(create_strategy_info('return_positions'), "持仓")
+    tab.add(create_strategy_info('return_portfolio'), "投资组合")
+    tab.add(create_strategy_info('return_trades'), "交易")
+    tab.add(create_data_history_grid(df,result), "股票图表")
     
     pageName = pageName + " " + "回测结果.html"
-    page.render(pageName)
+    tab.render(pageName)

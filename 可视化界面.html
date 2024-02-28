@@ -1,0 +1,2421 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+
+    
+</head>
+<body >
+            <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: block;
+        }
+
+        .chart-container:nth-child(n+2) {
+            display: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, 'c53f4e2732ef49af92d15923b92a19fc')">分时</button>
+            <button class="tablinks" onclick="showChart(event, '90a356bd66d546e9b9844af0454444cf')">日</button>
+            <button class="tablinks" onclick="showChart(event, 'b611a62b021b4e3d85ec8f37fafd6a8a')">周</button>
+            <button class="tablinks" onclick="showChart(event, '34014b724a0f4a91bbc3d6d4ca0f9d67')">月</button>
+            <button class="tablinks" onclick="showChart(event, 'cef3d38fa12c4e7cb6da8b41941e0ccc')">季</button>
+            <button class="tablinks" onclick="showChart(event, 'ba6897f7de084dd4ad8241c7da1b99f0')">年</button>
+            <button class="tablinks" onclick="showChart(event, 'e06c1823ea004aa696d1fbf0396480bc')">1分</button>
+            <button class="tablinks" onclick="showChart(event, '91a0d16929b7479e900c1ff14f77385c')">5分</button>
+            <button class="tablinks" onclick="showChart(event, '075d190567d74b28acacb376f72c60ab')">15分</button>
+            <button class="tablinks" onclick="showChart(event, '34fb1bee23c34aec8c34ee5b2ff37ca1')">30分</button>
+            <button class="tablinks" onclick="showChart(event, '9f51149cb73946328510dbaa465b3884')">60分</button>
+    </div>
+
+    <div class="box">
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="c53f4e2732ef49af92d15923b92a19fc" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+                <div id="90a356bd66d546e9b9844af0454444cf" class="chart-container" style="width:100%; height:400px; "></div>
+    <script>
+            document.getElementById('90a356bd66d546e9b9844af0454444cf').style.width = document.getElementById('90a356bd66d546e9b9844af0454444cf').parentNode.clientWidth + 'px';
+        var chart_90a356bd66d546e9b9844af0454444cf = echarts.init(
+            document.getElementById('90a356bd66d546e9b9844af0454444cf'), 'white', {renderer: 'canvas'});
+        var option_90a356bd66d546e9b9844af0454444cf = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": true,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": true,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "show": true,
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_90a356bd66d546e9b9844af0454444cf.setOption(option_90a356bd66d546e9b9844af0454444cf);
+            window.addEventListener('resize', function(){
+                chart_90a356bd66d546e9b9844af0454444cf.resize();
+            })
+    </script>
+                <div id="b611a62b021b4e3d85ec8f37fafd6a8a" class="chart-container" style="width:100%; height:800px; "></div>
+    <script>
+            document.getElementById('b611a62b021b4e3d85ec8f37fafd6a8a').style.width = document.getElementById('b611a62b021b4e3d85ec8f37fafd6a8a').parentNode.clientWidth + 'px';
+        var chart_b611a62b021b4e3d85ec8f37fafd6a8a = echarts.init(
+            document.getElementById('b611a62b021b4e3d85ec8f37fafd6a8a'), 'white', {renderer: 'canvas'});
+        var option_b611a62b021b4e3d85ec8f37fafd6a8a = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "A",
+            "connectNulls": false,
+            "xAxisIndex": 0,
+            "yAxisIndex": 0,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u5c0f\u7c73",
+                    59
+                ],
+                [
+                    "\u4e09\u661f",
+                    56
+                ],
+                [
+                    "\u534e\u4e3a",
+                    42
+                ],
+                [
+                    "\u82f9\u679c",
+                    95
+                ],
+                [
+                    "\u9b45\u65cf",
+                    149
+                ],
+                [
+                    "VIVO",
+                    29
+                ],
+                [
+                    "OPPO",
+                    138
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "B",
+            "connectNulls": false,
+            "xAxisIndex": 0,
+            "yAxisIndex": 0,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u5c0f\u7c73",
+                    134
+                ],
+                [
+                    "\u4e09\u661f",
+                    147
+                ],
+                [
+                    "\u534e\u4e3a",
+                    104
+                ],
+                [
+                    "\u82f9\u679c",
+                    35
+                ],
+                [
+                    "\u9b45\u65cf",
+                    74
+                ],
+                [
+                    "VIVO",
+                    25
+                ],
+                [
+                    "OPPO",
+                    129
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "C",
+            "connectNulls": false,
+            "xAxisIndex": 1,
+            "yAxisIndex": 1,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u54c8\u58eb\u5947",
+                    133
+                ],
+                [
+                    "\u8428\u6469\u8036",
+                    94
+                ],
+                [
+                    "\u6cf0\u8fea",
+                    135
+                ],
+                [
+                    "\u91d1\u6bdb",
+                    51
+                ],
+                [
+                    "\u7267\u7f8a\u72ac",
+                    32
+                ],
+                [
+                    "\u5409\u5a03\u5a03",
+                    67
+                ],
+                [
+                    "\u67ef\u57fa",
+                    45
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "D",
+            "connectNulls": false,
+            "xAxisIndex": 1,
+            "yAxisIndex": 1,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u54c8\u58eb\u5947",
+                    42
+                ],
+                [
+                    "\u8428\u6469\u8036",
+                    25
+                ],
+                [
+                    "\u6cf0\u8fea",
+                    134
+                ],
+                [
+                    "\u91d1\u6bdb",
+                    141
+                ],
+                [
+                    "\u7267\u7f8a\u72ac",
+                    79
+                ],
+                [
+                    "\u5409\u5a03\u5a03",
+                    35
+                ],
+                [
+                    "\u67ef\u57fa",
+                    118
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "E",
+            "connectNulls": false,
+            "xAxisIndex": 2,
+            "yAxisIndex": 2,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u6cb3\u9a6c",
+                    123
+                ],
+                [
+                    "\u87d2\u86c7",
+                    68
+                ],
+                [
+                    "\u8001\u864e",
+                    76
+                ],
+                [
+                    "\u5927\u8c61",
+                    144
+                ],
+                [
+                    "\u5154\u5b50",
+                    77
+                ],
+                [
+                    "\u718a\u732b",
+                    77
+                ],
+                [
+                    "\u72ee\u5b50",
+                    142
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "F",
+            "connectNulls": false,
+            "xAxisIndex": 2,
+            "yAxisIndex": 2,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u6cb3\u9a6c",
+                    34
+                ],
+                [
+                    "\u87d2\u86c7",
+                    122
+                ],
+                [
+                    "\u8001\u864e",
+                    114
+                ],
+                [
+                    "\u5927\u8c61",
+                    27
+                ],
+                [
+                    "\u5154\u5b50",
+                    133
+                ],
+                [
+                    "\u718a\u732b",
+                    25
+                ],
+                [
+                    "\u72ee\u5b50",
+                    108
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "G",
+            "connectNulls": false,
+            "xAxisIndex": 3,
+            "yAxisIndex": 3,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u5468\u4e00",
+                    25
+                ],
+                [
+                    "\u5468\u4e8c",
+                    57
+                ],
+                [
+                    "\u5468\u4e09",
+                    51
+                ],
+                [
+                    "\u5468\u56db",
+                    32
+                ],
+                [
+                    "\u5468\u4e94",
+                    75
+                ],
+                [
+                    "\u5468\u516d",
+                    92
+                ],
+                [
+                    "\u5468\u65e5",
+                    31
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "H",
+            "connectNulls": false,
+            "xAxisIndex": 3,
+            "yAxisIndex": 3,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u5468\u4e00",
+                    114
+                ],
+                [
+                    "\u5468\u4e8c",
+                    118
+                ],
+                [
+                    "\u5468\u4e09",
+                    33
+                ],
+                [
+                    "\u5468\u56db",
+                    42
+                ],
+                [
+                    "\u5468\u4e94",
+                    130
+                ],
+                [
+                    "\u5468\u516d",
+                    124
+                ],
+                [
+                    "\u5468\u65e5",
+                    142
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "A",
+                "B"
+            ],
+            "selected": {}
+        },
+        {
+            "data": [
+                "C",
+                "D"
+            ],
+            "selected": {}
+        },
+        {
+            "data": [
+                "E",
+                "F"
+            ],
+            "selected": {}
+        },
+        {
+            "data": [
+                "G",
+                "H"
+            ],
+            "selected": {}
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u5c0f\u7c73",
+                "\u4e09\u661f",
+                "\u534e\u4e3a",
+                "\u82f9\u679c",
+                "\u9b45\u65cf",
+                "VIVO",
+                "OPPO"
+            ]
+        },
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 1,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u54c8\u58eb\u5947",
+                "\u8428\u6469\u8036",
+                "\u6cf0\u8fea",
+                "\u91d1\u6bdb",
+                "\u7267\u7f8a\u72ac",
+                "\u5409\u5a03\u5a03",
+                "\u67ef\u57fa"
+            ]
+        },
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 2,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u6cb3\u9a6c",
+                "\u87d2\u86c7",
+                "\u8001\u864e",
+                "\u5927\u8c61",
+                "\u5154\u5b50",
+                "\u718a\u732b",
+                "\u72ee\u5b50"
+            ]
+        },
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 3,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u5468\u4e00",
+                "\u5468\u4e8c",
+                "\u5468\u4e09",
+                "\u5468\u56db",
+                "\u5468\u4e94",
+                "\u5468\u516d",
+                "\u5468\u65e5"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        },
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 1,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        },
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 2,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        },
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 3,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "grid": [
+        {
+            "show": false,
+            "zlevel": 0,
+            "z": 2,
+            "left": "5%",
+            "top": "10%",
+            "right": "55%",
+            "bottom": "50%",
+            "containLabel": false,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "shadowOffsetX": 0,
+            "shadowOffsetY": 0
+        },
+        {
+            "show": false,
+            "zlevel": 0,
+            "z": 2,
+            "left": "55%",
+            "top": "10%",
+            "right": "5%",
+            "bottom": "50%",
+            "containLabel": false,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "shadowOffsetX": 0,
+            "shadowOffsetY": 0
+        },
+        {
+            "show": false,
+            "zlevel": 0,
+            "z": 2,
+            "left": "5%",
+            "top": "60%",
+            "right": "55%",
+            "bottom": "5%",
+            "containLabel": false,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "shadowOffsetX": 0,
+            "shadowOffsetY": 0
+        },
+        {
+            "show": false,
+            "zlevel": 0,
+            "z": 2,
+            "left": "55%",
+            "top": "60%",
+            "right": "5%",
+            "bottom": "5%",
+            "containLabel": false,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "shadowOffsetX": 0,
+            "shadowOffsetY": 0
+        }
+    ],
+    "title": [
+        {
+            "show": true,
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        },
+        {
+            "show": true,
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        },
+        {
+            "show": true,
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        },
+        {
+            "show": true,
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_b611a62b021b4e3d85ec8f37fafd6a8a.setOption(option_b611a62b021b4e3d85ec8f37fafd6a8a);
+            window.addEventListener('resize', function(){
+                chart_b611a62b021b4e3d85ec8f37fafd6a8a.resize();
+            })
+    </script>
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="34014b724a0f4a91bbc3d6d4ca0f9d67" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="cef3d38fa12c4e7cb6da8b41941e0ccc" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="ba6897f7de084dd4ad8241c7da1b99f0" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="e06c1823ea004aa696d1fbf0396480bc" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="91a0d16929b7479e900c1ff14f77385c" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="075d190567d74b28acacb376f72c60ab" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="34fb1bee23c34aec8c34ee5b2ff37ca1" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="9f51149cb73946328510dbaa465b3884" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 回测绩效</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>trade_count</th>
+            <th>initial_market_value</th>
+            <th>end_market_value</th>
+            <th>total_pnl</th>
+            <th>unrealized_pnl</th>
+            <th>total_return_pct</th>
+            <th>total_profit</th>
+            <th>total_loss</th>
+            <th>total_fees</th>
+            <th>max_drawdown</th>
+            <th>max_drawdown_pct</th>
+            <th>win_rate</th>
+            <th>loss_rate</th>
+            <th>winning_trades</th>
+            <th>losing_trades</th>
+            <th>avg_pnl</th>
+            <th>avg_return_pct</th>
+            <th>avg_trade_bars</th>
+            <th>avg_profit</th>
+            <th>avg_profit_pct</th>
+            <th>avg_winning_trade_bars</th>
+            <th>avg_loss</th>
+            <th>avg_loss_pct</th>
+            <th>avg_losing_trade_bars</th>
+            <th>largest_win</th>
+            <th>largest_win_pct</th>
+            <th>largest_win_bars</th>
+            <th>largest_loss</th>
+            <th>largest_loss_pct</th>
+            <th>largest_loss_bars</th>
+            <th>max_wins</th>
+            <th>max_losses</th>
+            <th>sharpe</th>
+            <th>sortino</th>
+            <th>profit_factor</th>
+            <th>ulcer_index</th>
+            <th>upi</th>
+            <th>equity_r2</th>
+            <th>std_error</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>69.0</td>
+            <td>500000.0</td>
+            <td>472249.09</td>
+            <td>-47692.11</td>
+            <td>19941.2</td>
+            <td>-9.54</td>
+            <td>130831.19</td>
+            <td>-178523.3</td>
+            <td>0.0</td>
+            <td>-82394.82</td>
+            <td>-15.69</td>
+            <td>42.03</td>
+            <td>57.97</td>
+            <td>29.0</td>
+            <td>40.0</td>
+            <td>-691.19</td>
+            <td>-0.9</td>
+            <td>10.06</td>
+            <td>4511.42</td>
+            <td>2.73</td>
+            <td>11.28</td>
+            <td>-4463.08</td>
+            <td>-3.54</td>
+            <td>9.18</td>
+            <td>40190.24</td>
+            <td>8.94</td>
+            <td>10.0</td>
+            <td>-48520.02</td>
+            <td>-10.02</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>-0.02</td>
+            <td>-0.03</td>
+            <td>0.94</td>
+            <td>2.9</td>
+            <td>-0.01</td>
+            <td>0.47</td>
+            <td>19531.34</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

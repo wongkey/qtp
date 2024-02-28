@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from auto.parameter import get_init_parameters
+from auto.parameter import get_init_parameters,last_update_data_date
 from auto.trade_date import get_trade_date
 
 from auto.clear_data import clear_basic_data
@@ -34,5 +34,8 @@ get_trade_date(engine)
 
 #开始采集A股股票历史数据
 get_stock_data(engine)
+
+#更新数据截至日期
+last_update_data_date(engine)
 
 print("完成采集初始化数据程序")

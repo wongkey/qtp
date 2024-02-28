@@ -4,7 +4,7 @@
 """
 
 import talib
-
+import pandas as pd
 import pybroker as pb
 from pybroker.ext.data import AKShare
 
@@ -33,6 +33,8 @@ def calculate_indicator(df) :
     
     #ATR
     df['ATR'] = talib.ATR(df.high, df.low, df.close, timeperiod=14)
+    
+    
     
     return df
     
