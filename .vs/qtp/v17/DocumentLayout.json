@@ -3,36 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart - \u526F\u672C.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\strategy_chart - \u526F\u672C.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\24313\\Documents\\GitHub\\qtp\\autojob.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:autojob.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\strategy_chart.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\stock_data.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\stock_data.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart_table.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\strategy_chart_table.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\24313\\Documents\\GitHub\\qtp\\init.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:init.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart_kline.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\strategy_chart_kline.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\24313\\Documents\\GitHub\\qtp\\autojob.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:autojob.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\24313\\Documents\\GitHub\\qtp\\test\\strategy_chart_test.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\strategy_chart_test.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\clear_data.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\clear_data.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\backtest.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\backtest.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\indicator_talib.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\indicator_talib.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\util\\parameter.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:auto\\util\\parameter.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,58 +38,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "stock_data.py",
-              "DocumentMoniker": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\stock_data.py",
-              "RelativeDocumentMoniker": "auto\\stock_data.py",
-              "ToolTip": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\stock_data.py",
-              "RelativeToolTip": "auto\\stock_data.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAABZAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUjSURBVEhLlVVvbBRFFP/t7N5d77jz7LU9amhaS8vfGIxBExKNxKokYIMCKv0ifABEgoSCCEZCQ9LEKjGGCIE2REoUP9hICR\u002BKqUEMikYSEQWKIqRUhLb8u165Y\u002B/P7uz4Zm6vcLWG\u002BEvevnk7M\u002B/N\u002B83btxrug5r\u002B3a2mY8wTVkpnwqnrn9h43p1SaBlqeLg3XfThnof2vey\u002BugshxJgBlsS2VmZsrSvuD0w/fbuYWSILw7ZhcJsblrW\u002Bb\u002Bqmj\u002BW6lnjDYj\u002B01j03S0I9tTsNtXkUCgJsvLJu6fiAtZON8wRPmiU4YpbB0hzonMOwKAAF0bkDL3OOvlraE48Y1sLelA8H4mE8V5Ka8mnZnj9dVyNg8rGpv3F9\u002B40Vt2f6E/ssrgVPXBuHw6kSZMm5JgSY44DogU464jExv/R8XVi3FhZB4GfTj6jOEbbFs8rjKKgMtlxdeyGiZ2vjjgd7V39C3AGORZIVpEmUHmVn5Zr83F1b8ELaVQYezQmlhY60UCYc291s0wa5KW/LsRI6w8jcPTank42C8khEBKXztKMrZ3Jjf/cdDB41carzIprXbiPefWrukUmPYkdLK271JnD2xB9YtuR1dRApCl1DVblBDiqApsGrApDkTy6xefvb\u002BOxgO5YvXoUFz7\u002BCivJKdHd8i2jpeLzUMB9dX3WBrkbtycNb6b/oOT7c6JrQtoqthhiIWXHuwYDtw/crtiteB4\u002BZeHHlHAwOXsPhfd9gV/sOpMwUNq15F1XTKmAmUrnDEPdU7q47wHeRXvh0OEn7tGVbc5hvMF6RP/0Vu6ggg0NtX\u002BPEod8wfHsYre27ER\u002BKI3knCTNJztW9FDpX0OmODQ2sxDvDMLGXpTVeLrlP0SXf4t4cn7RR4p3338Ks\u002BscwY/Y0DMWG0HGgA\u002BHwg2hueg\u002BTa6agaUsTFi1alFvsoiPSjCiPwT4Vh9ZvbmZpboyXp79JFEX1zEhFSJzpOY2enp5ctZAk4kmsXrMKK5evxLmz57BhwwaUlpaqtXnUeU9i6fAhaCl\u002BxFoQ/ZUNc0\u002BtPL0s02cCMTcDgfBUH7774VjOdrOSev/\u002Bz1FcXIzq6mqEQiG0tbW5rnOgG8Dcsl8gDLZd2iwNrSJJGdR4UrghKVIZ5Ep1pMbdrOS7fMX09fUpPRpZKsypwSuC10e6pM0yjl4Vs72KogEuaz3nJCfuB5Z/R4HvB6pa6IxrmcTc6dJmGcHKE46BfipRWaZ5RznJO8/ZwhlVMWNABpAiPOxNabMkZw/E6PTXKQsphfS4FMnxGG1gLCjnaiTq5JNd5f6wsl3k6Uldt5GJc1gmB7ccVe\u002BXLl1yV/03OPVPmSjpGmkzKtGomqEmKDh9gYoWaoAhHbqPURvRRkRWzv0gnbs00b9p7mwGrh1xMh7OM8R/hjr8PRUjx/8XOeeUBWlha8tU7554tuUJ7hi76P4fh8PoMqmrcgNfTO9GQBMIEKtB\u002Bvn4aUw5wUPb5d\u002BWkqKxQIy\u002Bod9pfZDm5boQ6XEkRUJcLvg5VJ/54DVysY2YKxcUaF3ZBdQHb2CCl3oPOaLEqM41ZMh5ivQd\u002Bn4SND5oBUDFglrDQpQ5CNLqIgowgfFYQQCJKcc3hjKRks0QrJFO6cv8XYsIXU/TjO4fXyj\u002Bq9iGNjklmJEPkCTdmQmginFU6pbMUjAher2OZ/XT4Y7ufwXIY\u002BK55kkC3o/My5NmGsHswqtPNfzkTmE4XT8v6\u002BANamdP9jreyE2HiajGB0LA2lmhzi/dZQTgH/DyE3Hn7Qs\u002BAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-02-20T11:56:42.831Z",
+              "Title": "strategy_chart_table.py",
+              "DocumentMoniker": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart_table.py",
+              "RelativeDocumentMoniker": "auto\\strategy_chart_table.py",
+              "ToolTip": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart_table.py",
+              "RelativeToolTip": "auto\\strategy_chart_table.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM5SURBVEhLtVVNSFRRFD7z85yGyZnUYZwxIrGUsCRSSrFFJlQriSCKCBdBLmZTlKCBi8xVzc5NiyREIqJVC6FctCgy6sWggyAVWDOpTaWpozO9mTfv53bue3fGMX3yLPrg45x33r3n3Pvd8\u002B6D/wpCiIW5eXR0dBDmmsXhgYGBMPPXYcMC/f397Glz9PT0SKIoTkuSdBGL8Cy8BlZm/woej4fr6uoq5TjuIS6skYXXwLAAz/OGLITP5yspKNLAwsagEgmCYIq9vb15PxqNLgaDwSmcv4el0vBPElGEQiGNQ0NDJTabzY\u002BhOv2NDjuz6/CnFIVobNTlRmk0m8Pg4GA4EomwJx2GO6BJNmJTUxOg3iAoFphNZCG2mIGltAp2u50euoNNz8NwB0ZYEUS4PfIeYvMrIKRFUGQZKUG52wF9504eGh8f59hQDVvuolhChjIXB6Hz9Sy5zpn5ZRgOf3G0tLTUsBQatiyRqhJ4/eEbdD54A6qiIGXdYpGUkIHi4uLtLIWGTbtIwYmUFqsVwtMpePQuDmPRn3C81g/NNT44UVcBnI2Ow13QIqoKx\u002BoTN0jyGSHS3CheRaWmuijhrob7L6byeq9Ko/t09ZolKoDwSp\u002BUmTwK3s6bpiQamYizVVLSXeX81RiVqrqczsS7UslggY8A8o/Tm0qUw\u002Bx8UltljjZcaaXXBVXlbqjyu2FvwANnmqvgQsMnTCpggTQSbTa\u002B2/A2LZToDi\u002BBLFE5JNhZ4oR77SI4yRS\u002Byd3saKU4Jk8BqCIyiwXQ\u002BrvNdVEF9jiVgEoRbHWBU3qJyb4iMak0CyB\u002BRrvMVo7M7aJo15IpiVoPBPKH6dkmsyhClXQpZJa40HdUA3CBJ6Ykoki7KyG\u002BkIS2g2nwkceYhElRVIu/LbwhCC2MTWl1ocXe3XFqDuzeI6b/aFb8FiwWCxSp2B0Ld/XkVG8FLVHQx3Nw4SVY0X0Lh48ieRyfNCURBf2I6BkQ7KFVrZksZZcBvJdwFU5tLCZ\u002BTpNrvhYpAN0BczfE9WtXJ/f53u6HxFO9SG4XrnqQAn1ZzuE5i8mH2fCtAz9/G/IKkZMR8mtCJqkxQrLfYxjjke3INjYUAfAb47MfvRyFLYgAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-14T07:43:38.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "init.py",
-              "DocumentMoniker": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\init.py",
-              "RelativeDocumentMoniker": "init.py",
-              "ToolTip": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\init.py",
-              "RelativeToolTip": "init.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvyMAAAAOAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUjSURBVEhLlVVvbBRFFP/t7N5d77jz7LU9amhaS8vfGIxBExKNxKokYIMCKv0ifABEgoSCCEZCQ9LEKjGGCIE2REoUP9hICR\u002BKqUEMikYSEQWKIqRUhLb8u165Y\u002B/P7uz4Zm6vcLWG\u002BEvevnk7M\u002B/N\u002B83btxrug5r\u002B3a2mY8wTVkpnwqnrn9h43p1SaBlqeLg3XfThnof2vey\u002BugshxJgBlsS2VmZsrSvuD0w/fbuYWSILw7ZhcJsblrW\u002Bb\u002Bqmj\u002BW6lnjDYj\u002B01j03S0I9tTsNtXkUCgJsvLJu6fiAtZON8wRPmiU4YpbB0hzonMOwKAAF0bkDL3OOvlraE48Y1sLelA8H4mE8V5Ka8mnZnj9dVyNg8rGpv3F9\u002B40Vt2f6E/ssrgVPXBuHw6kSZMm5JgSY44DogU464jExv/R8XVi3FhZB4GfTj6jOEbbFs8rjKKgMtlxdeyGiZ2vjjgd7V39C3AGORZIVpEmUHmVn5Zr83F1b8ELaVQYezQmlhY60UCYc291s0wa5KW/LsRI6w8jcPTank42C8khEBKXztKMrZ3Jjf/cdDB41carzIprXbiPefWrukUmPYkdLK271JnD2xB9YtuR1dRApCl1DVblBDiqApsGrApDkTy6xefvb\u002BOxgO5YvXoUFz7\u002BCivJKdHd8i2jpeLzUMB9dX3WBrkbtycNb6b/oOT7c6JrQtoqthhiIWXHuwYDtw/crtiteB4\u002BZeHHlHAwOXsPhfd9gV/sOpMwUNq15F1XTKmAmUrnDEPdU7q47wHeRXvh0OEn7tGVbc5hvMF6RP/0Vu6ggg0NtX\u002BPEod8wfHsYre27ER\u002BKI3knCTNJztW9FDpX0OmODQ2sxDvDMLGXpTVeLrlP0SXf4t4cn7RR4p3338Ks\u002BscwY/Y0DMWG0HGgA\u002BHwg2hueg\u002BTa6agaUsTFi1alFvsoiPSjCiPwT4Vh9ZvbmZpboyXp79JFEX1zEhFSJzpOY2enp5ctZAk4kmsXrMKK5evxLmz57BhwwaUlpaqtXnUeU9i6fAhaCl\u002BxFoQ/ZUNc0\u002BtPL0s02cCMTcDgfBUH7774VjOdrOSev/\u002Bz1FcXIzq6mqEQiG0tbW5rnOgG8Dcsl8gDLZd2iwNrSJJGdR4UrghKVIZ5Ep1pMbdrOS7fMX09fUpPRpZKsypwSuC10e6pM0yjl4Vs72KogEuaz3nJCfuB5Z/R4HvB6pa6IxrmcTc6dJmGcHKE46BfipRWaZ5RznJO8/ZwhlVMWNABpAiPOxNabMkZw/E6PTXKQsphfS4FMnxGG1gLCjnaiTq5JNd5f6wsl3k6Uldt5GJc1gmB7ccVe\u002BXLl1yV/03OPVPmSjpGmkzKtGomqEmKDh9gYoWaoAhHbqPURvRRkRWzv0gnbs00b9p7mwGrh1xMh7OM8R/hjr8PRUjx/8XOeeUBWlha8tU7554tuUJ7hi76P4fh8PoMqmrcgNfTO9GQBMIEKtB\u002Bvn4aUw5wUPb5d\u002BWkqKxQIy\u002Bod9pfZDm5boQ6XEkRUJcLvg5VJ/54DVysY2YKxcUaF3ZBdQHb2CCl3oPOaLEqM41ZMh5ivQd\u002Bn4SND5oBUDFglrDQpQ5CNLqIgowgfFYQQCJKcc3hjKRks0QrJFO6cv8XYsIXU/TjO4fXyj\u002Bq9iGNjklmJEPkCTdmQmginFU6pbMUjAher2OZ/XT4Y7ufwXIY\u002BK55kkC3o/My5NmGsHswqtPNfzkTmE4XT8v6\u002BANamdP9jreyE2HiajGB0LA2lmhzi/dZQTgH/DyE3Hn7Qs\u002BAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-02-20T11:56:34.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "strategy_chart - \u526F\u672C.py",
-              "DocumentMoniker": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart - \u526F\u672C.py",
-              "RelativeDocumentMoniker": "auto\\strategy_chart - \u526F\u672C.py",
-              "ToolTip": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart - \u526F\u672C.py",
-              "RelativeToolTip": "auto\\strategy_chart - \u526F\u672C.py",
-              "ViewState": "AQIAACkBAAAAAAAAAAAAAEUBAAAFAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUjSURBVEhLlVVvbBRFFP/t7N5d77jz7LU9amhaS8vfGIxBExKNxKokYIMCKv0ifABEgoSCCEZCQ9LEKjGGCIE2REoUP9hICR\u002BKqUEMikYSEQWKIqRUhLb8u165Y\u002B/P7uz4Zm6vcLWG\u002BEvevnk7M\u002B/N\u002B83btxrug5r\u002B3a2mY8wTVkpnwqnrn9h43p1SaBlqeLg3XfThnof2vey\u002BugshxJgBlsS2VmZsrSvuD0w/fbuYWSILw7ZhcJsblrW\u002Bb\u002Bqmj\u002BW6lnjDYj\u002B01j03S0I9tTsNtXkUCgJsvLJu6fiAtZON8wRPmiU4YpbB0hzonMOwKAAF0bkDL3OOvlraE48Y1sLelA8H4mE8V5Ka8mnZnj9dVyNg8rGpv3F9\u002B40Vt2f6E/ssrgVPXBuHw6kSZMm5JgSY44DogU464jExv/R8XVi3FhZB4GfTj6jOEbbFs8rjKKgMtlxdeyGiZ2vjjgd7V39C3AGORZIVpEmUHmVn5Zr83F1b8ELaVQYezQmlhY60UCYc291s0wa5KW/LsRI6w8jcPTank42C8khEBKXztKMrZ3Jjf/cdDB41carzIprXbiPefWrukUmPYkdLK271JnD2xB9YtuR1dRApCl1DVblBDiqApsGrApDkTy6xefvb\u002BOxgO5YvXoUFz7\u002BCivJKdHd8i2jpeLzUMB9dX3WBrkbtycNb6b/oOT7c6JrQtoqthhiIWXHuwYDtw/crtiteB4\u002BZeHHlHAwOXsPhfd9gV/sOpMwUNq15F1XTKmAmUrnDEPdU7q47wHeRXvh0OEn7tGVbc5hvMF6RP/0Vu6ggg0NtX\u002BPEod8wfHsYre27ER\u002BKI3knCTNJztW9FDpX0OmODQ2sxDvDMLGXpTVeLrlP0SXf4t4cn7RR4p3338Ks\u002BscwY/Y0DMWG0HGgA\u002BHwg2hueg\u002BTa6agaUsTFi1alFvsoiPSjCiPwT4Vh9ZvbmZpboyXp79JFEX1zEhFSJzpOY2enp5ctZAk4kmsXrMKK5evxLmz57BhwwaUlpaqtXnUeU9i6fAhaCl\u002BxFoQ/ZUNc0\u002BtPL0s02cCMTcDgfBUH7774VjOdrOSev/\u002Bz1FcXIzq6mqEQiG0tbW5rnOgG8Dcsl8gDLZd2iwNrSJJGdR4UrghKVIZ5Ep1pMbdrOS7fMX09fUpPRpZKsypwSuC10e6pM0yjl4Vs72KogEuaz3nJCfuB5Z/R4HvB6pa6IxrmcTc6dJmGcHKE46BfipRWaZ5RznJO8/ZwhlVMWNABpAiPOxNabMkZw/E6PTXKQsphfS4FMnxGG1gLCjnaiTq5JNd5f6wsl3k6Uldt5GJc1gmB7ccVe\u002BXLl1yV/03OPVPmSjpGmkzKtGomqEmKDh9gYoWaoAhHbqPURvRRkRWzv0gnbs00b9p7mwGrh1xMh7OM8R/hjr8PRUjx/8XOeeUBWlha8tU7554tuUJ7hi76P4fh8PoMqmrcgNfTO9GQBMIEKtB\u002Bvn4aUw5wUPb5d\u002BWkqKxQIy\u002Bod9pfZDm5boQ6XEkRUJcLvg5VJ/54DVysY2YKxcUaF3ZBdQHb2CCl3oPOaLEqM41ZMh5ivQd\u002Bn4SND5oBUDFglrDQpQ5CNLqIgowgfFYQQCJKcc3hjKRks0QrJFO6cv8XYsIXU/TjO4fXyj\u002Bq9iGNjklmJEPkCTdmQmginFU6pbMUjAher2OZ/XT4Y7ufwXIY\u002BK55kkC3o/My5NmGsHswqtPNfzkTmE4XT8v6\u002BANamdP9jreyE2HiajGB0LA2lmhzi/dZQTgH/DyE3Hn7Qs\u002BAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-02-20T11:21:19.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "strategy_chart_test.py",
-              "DocumentMoniker": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\test\\strategy_chart_test.py",
-              "RelativeDocumentMoniker": "test\\strategy_chart_test.py",
-              "ToolTip": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\test\\strategy_chart_test.py",
-              "RelativeToolTip": "test\\strategy_chart_test.py",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAAAA4AAAAdAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUjSURBVEhLlVVvbBRFFP/t7N5d77jz7LU9amhaS8vfGIxBExKNxKokYIMCKv0ifABEgoSCCEZCQ9LEKjGGCIE2REoUP9hICR\u002BKqUEMikYSEQWKIqRUhLb8u165Y\u002B/P7uz4Zm6vcLWG\u002BEvevnk7M\u002B/N\u002B83btxrug5r\u002B3a2mY8wTVkpnwqnrn9h43p1SaBlqeLg3XfThnof2vey\u002BugshxJgBlsS2VmZsrSvuD0w/fbuYWSILw7ZhcJsblrW\u002Bb\u002Bqmj\u002BW6lnjDYj\u002B01j03S0I9tTsNtXkUCgJsvLJu6fiAtZON8wRPmiU4YpbB0hzonMOwKAAF0bkDL3OOvlraE48Y1sLelA8H4mE8V5Ka8mnZnj9dVyNg8rGpv3F9\u002B40Vt2f6E/ssrgVPXBuHw6kSZMm5JgSY44DogU464jExv/R8XVi3FhZB4GfTj6jOEbbFs8rjKKgMtlxdeyGiZ2vjjgd7V39C3AGORZIVpEmUHmVn5Zr83F1b8ELaVQYezQmlhY60UCYc291s0wa5KW/LsRI6w8jcPTank42C8khEBKXztKMrZ3Jjf/cdDB41carzIprXbiPefWrukUmPYkdLK271JnD2xB9YtuR1dRApCl1DVblBDiqApsGrApDkTy6xefvb\u002BOxgO5YvXoUFz7\u002BCivJKdHd8i2jpeLzUMB9dX3WBrkbtycNb6b/oOT7c6JrQtoqthhiIWXHuwYDtw/crtiteB4\u002BZeHHlHAwOXsPhfd9gV/sOpMwUNq15F1XTKmAmUrnDEPdU7q47wHeRXvh0OEn7tGVbc5hvMF6RP/0Vu6ggg0NtX\u002BPEod8wfHsYre27ER\u002BKI3knCTNJztW9FDpX0OmODQ2sxDvDMLGXpTVeLrlP0SXf4t4cn7RR4p3338Ks\u002BscwY/Y0DMWG0HGgA\u002BHwg2hueg\u002BTa6agaUsTFi1alFvsoiPSjCiPwT4Vh9ZvbmZpboyXp79JFEX1zEhFSJzpOY2enp5ctZAk4kmsXrMKK5evxLmz57BhwwaUlpaqtXnUeU9i6fAhaCl\u002BxFoQ/ZUNc0\u002BtPL0s02cCMTcDgfBUH7774VjOdrOSev/\u002Bz1FcXIzq6mqEQiG0tbW5rnOgG8Dcsl8gDLZd2iwNrSJJGdR4UrghKVIZ5Ep1pMbdrOS7fMX09fUpPRpZKsypwSuC10e6pM0yjl4Vs72KogEuaz3nJCfuB5Z/R4HvB6pa6IxrmcTc6dJmGcHKE46BfipRWaZ5RznJO8/ZwhlVMWNABpAiPOxNabMkZw/E6PTXKQsphfS4FMnxGG1gLCjnaiTq5JNd5f6wsl3k6Uldt5GJc1gmB7ccVe\u002BXLl1yV/03OPVPmSjpGmkzKtGomqEmKDh9gYoWaoAhHbqPURvRRkRWzv0gnbs00b9p7mwGrh1xMh7OM8R/hjr8PRUjx/8XOeeUBWlha8tU7554tuUJ7hi76P4fh8PoMqmrcgNfTO9GQBMIEKtB\u002Bvn4aUw5wUPb5d\u002BWkqKxQIy\u002Bod9pfZDm5boQ6XEkRUJcLvg5VJ/54DVysY2YKxcUaF3ZBdQHb2CCl3oPOaLEqM41ZMh5ivQd\u002Bn4SND5oBUDFglrDQpQ5CNLqIgowgfFYQQCJKcc3hjKRks0QrJFO6cv8XYsIXU/TjO4fXyj\u002Bq9iGNjklmJEPkCTdmQmginFU6pbMUjAher2OZ/XT4Y7ufwXIY\u002BK55kkC3o/My5NmGsHswqtPNfzkTmE4XT8v6\u002BANamdP9jreyE2HiajGB0LA2lmhzi/dZQTgH/DyE3Hn7Qs\u002BAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-02-20T10:16:47.371Z",
+              "Title": "strategy_chart_kline.py",
+              "DocumentMoniker": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart_kline.py",
+              "RelativeDocumentMoniker": "auto\\strategy_chart_kline.py",
+              "ToolTip": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart_kline.py",
+              "RelativeToolTip": "auto\\strategy_chart_kline.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAATAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM5SURBVEhLtVVNSFRRFD7z85yGyZnUYZwxIrGUsCRSSrFFJlQriSCKCBdBLmZTlKCBi8xVzc5NiyREIqJVC6FctCgy6sWggyAVWDOpTaWpozO9mTfv53bue3fGMX3yLPrg45x33r3n3Pvd8\u002B6D/wpCiIW5eXR0dBDmmsXhgYGBMPPXYcMC/f397Glz9PT0SKIoTkuSdBGL8Cy8BlZm/woej4fr6uoq5TjuIS6skYXXwLAAz/OGLITP5yspKNLAwsagEgmCYIq9vb15PxqNLgaDwSmcv4el0vBPElGEQiGNQ0NDJTabzY\u002BhOv2NDjuz6/CnFIVobNTlRmk0m8Pg4GA4EomwJx2GO6BJNmJTUxOg3iAoFphNZCG2mIGltAp2u50euoNNz8NwB0ZYEUS4PfIeYvMrIKRFUGQZKUG52wF9504eGh8f59hQDVvuolhChjIXB6Hz9Sy5zpn5ZRgOf3G0tLTUsBQatiyRqhJ4/eEbdD54A6qiIGXdYpGUkIHi4uLtLIWGTbtIwYmUFqsVwtMpePQuDmPRn3C81g/NNT44UVcBnI2Ow13QIqoKx\u002BoTN0jyGSHS3CheRaWmuijhrob7L6byeq9Ko/t09ZolKoDwSp\u002BUmTwK3s6bpiQamYizVVLSXeX81RiVqrqczsS7UslggY8A8o/Tm0qUw\u002Bx8UltljjZcaaXXBVXlbqjyu2FvwANnmqvgQsMnTCpggTQSbTa\u002B2/A2LZToDi\u002BBLFE5JNhZ4oR77SI4yRS\u002Byd3saKU4Jk8BqCIyiwXQ\u002BrvNdVEF9jiVgEoRbHWBU3qJyb4iMak0CyB\u002BRrvMVo7M7aJo15IpiVoPBPKH6dkmsyhClXQpZJa40HdUA3CBJ6Ykoki7KyG\u002BkIS2g2nwkceYhElRVIu/LbwhCC2MTWl1ocXe3XFqDuzeI6b/aFb8FiwWCxSp2B0Ld/XkVG8FLVHQx3Nw4SVY0X0Lh48ieRyfNCURBf2I6BkQ7KFVrZksZZcBvJdwFU5tLCZ\u002BTpNrvhYpAN0BczfE9WtXJ/f53u6HxFO9SG4XrnqQAn1ZzuE5i8mH2fCtAz9/G/IKkZMR8mtCJqkxQrLfYxjjke3INjYUAfAb47MfvRyFLYgAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-14T07:35:41.592Z",
               "EditorCaption": ""
             },
             {
@@ -104,48 +74,61 @@
               "RelativeDocumentMoniker": "auto\\strategy_chart.py",
               "ToolTip": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\strategy_chart.py",
               "RelativeToolTip": "auto\\strategy_chart.py",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAAAGcAAAAnAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUjSURBVEhLlVVvbBRFFP/t7N5d77jz7LU9amhaS8vfGIxBExKNxKokYIMCKv0ifABEgoSCCEZCQ9LEKjGGCIE2REoUP9hICR\u002BKqUEMikYSEQWKIqRUhLb8u165Y\u002B/P7uz4Zm6vcLWG\u002BEvevnk7M\u002B/N\u002B83btxrug5r\u002B3a2mY8wTVkpnwqnrn9h43p1SaBlqeLg3XfThnof2vey\u002BugshxJgBlsS2VmZsrSvuD0w/fbuYWSILw7ZhcJsblrW\u002Bb\u002Bqmj\u002BW6lnjDYj\u002B01j03S0I9tTsNtXkUCgJsvLJu6fiAtZON8wRPmiU4YpbB0hzonMOwKAAF0bkDL3OOvlraE48Y1sLelA8H4mE8V5Ka8mnZnj9dVyNg8rGpv3F9\u002B40Vt2f6E/ssrgVPXBuHw6kSZMm5JgSY44DogU464jExv/R8XVi3FhZB4GfTj6jOEbbFs8rjKKgMtlxdeyGiZ2vjjgd7V39C3AGORZIVpEmUHmVn5Zr83F1b8ELaVQYezQmlhY60UCYc291s0wa5KW/LsRI6w8jcPTank42C8khEBKXztKMrZ3Jjf/cdDB41carzIprXbiPefWrukUmPYkdLK271JnD2xB9YtuR1dRApCl1DVblBDiqApsGrApDkTy6xefvb\u002BOxgO5YvXoUFz7\u002BCivJKdHd8i2jpeLzUMB9dX3WBrkbtycNb6b/oOT7c6JrQtoqthhiIWXHuwYDtw/crtiteB4\u002BZeHHlHAwOXsPhfd9gV/sOpMwUNq15F1XTKmAmUrnDEPdU7q47wHeRXvh0OEn7tGVbc5hvMF6RP/0Vu6ggg0NtX\u002BPEod8wfHsYre27ER\u002BKI3knCTNJztW9FDpX0OmODQ2sxDvDMLGXpTVeLrlP0SXf4t4cn7RR4p3338Ks\u002BscwY/Y0DMWG0HGgA\u002BHwg2hueg\u002BTa6agaUsTFi1alFvsoiPSjCiPwT4Vh9ZvbmZpboyXp79JFEX1zEhFSJzpOY2enp5ctZAk4kmsXrMKK5evxLmz57BhwwaUlpaqtXnUeU9i6fAhaCl\u002BxFoQ/ZUNc0\u002BtPL0s02cCMTcDgfBUH7774VjOdrOSev/\u002Bz1FcXIzq6mqEQiG0tbW5rnOgG8Dcsl8gDLZd2iwNrSJJGdR4UrghKVIZ5Ep1pMbdrOS7fMX09fUpPRpZKsypwSuC10e6pM0yjl4Vs72KogEuaz3nJCfuB5Z/R4HvB6pa6IxrmcTc6dJmGcHKE46BfipRWaZ5RznJO8/ZwhlVMWNABpAiPOxNabMkZw/E6PTXKQsphfS4FMnxGG1gLCjnaiTq5JNd5f6wsl3k6Uldt5GJc1gmB7ccVe\u002BXLl1yV/03OPVPmSjpGmkzKtGomqEmKDh9gYoWaoAhHbqPURvRRkRWzv0gnbs00b9p7mwGrh1xMh7OM8R/hjr8PRUjx/8XOeeUBWlha8tU7554tuUJ7hi76P4fh8PoMqmrcgNfTO9GQBMIEKtB\u002Bvn4aUw5wUPb5d\u002BWkqKxQIy\u002Bod9pfZDm5boQ6XEkRUJcLvg5VJ/54DVysY2YKxcUaF3ZBdQHb2CCl3oPOaLEqM41ZMh5ivQd\u002Bn4SND5oBUDFglrDQpQ5CNLqIgowgfFYQQCJKcc3hjKRks0QrJFO6cv8XYsIXU/TjO4fXyj\u002Bq9iGNjklmJEPkCTdmQmginFU6pbMUjAher2OZ/XT4Y7ufwXIY\u002BK55kkC3o/My5NmGsHswqtPNfzkTmE4XT8v6\u002BANamdP9jreyE2HiajGB0LA2lmhzi/dZQTgH/DyE3Hn7Qs\u002BAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-02-20T09:55:49.383Z",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAnAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM5SURBVEhLtVVNSFRRFD7z85yGyZnUYZwxIrGUsCRSSrFFJlQriSCKCBdBLmZTlKCBi8xVzc5NiyREIqJVC6FctCgy6sWggyAVWDOpTaWpozO9mTfv53bue3fGMX3yLPrg45x33r3n3Pvd8\u002B6D/wpCiIW5eXR0dBDmmsXhgYGBMPPXYcMC/f397Glz9PT0SKIoTkuSdBGL8Cy8BlZm/woej4fr6uoq5TjuIS6skYXXwLAAz/OGLITP5yspKNLAwsagEgmCYIq9vb15PxqNLgaDwSmcv4el0vBPElGEQiGNQ0NDJTabzY\u002BhOv2NDjuz6/CnFIVobNTlRmk0m8Pg4GA4EomwJx2GO6BJNmJTUxOg3iAoFphNZCG2mIGltAp2u50euoNNz8NwB0ZYEUS4PfIeYvMrIKRFUGQZKUG52wF9504eGh8f59hQDVvuolhChjIXB6Hz9Sy5zpn5ZRgOf3G0tLTUsBQatiyRqhJ4/eEbdD54A6qiIGXdYpGUkIHi4uLtLIWGTbtIwYmUFqsVwtMpePQuDmPRn3C81g/NNT44UVcBnI2Ow13QIqoKx\u002BoTN0jyGSHS3CheRaWmuijhrob7L6byeq9Ko/t09ZolKoDwSp\u002BUmTwK3s6bpiQamYizVVLSXeX81RiVqrqczsS7UslggY8A8o/Tm0qUw\u002Bx8UltljjZcaaXXBVXlbqjyu2FvwANnmqvgQsMnTCpggTQSbTa\u002B2/A2LZToDi\u002BBLFE5JNhZ4oR77SI4yRS\u002Byd3saKU4Jk8BqCIyiwXQ\u002BrvNdVEF9jiVgEoRbHWBU3qJyb4iMak0CyB\u002BRrvMVo7M7aJo15IpiVoPBPKH6dkmsyhClXQpZJa40HdUA3CBJ6Ykoki7KyG\u002BkIS2g2nwkceYhElRVIu/LbwhCC2MTWl1ocXe3XFqDuzeI6b/aFb8FiwWCxSp2B0Ld/XkVG8FLVHQx3Nw4SVY0X0Lh48ieRyfNCURBf2I6BkQ7KFVrZksZZcBvJdwFU5tLCZ\u002BTpNrvhYpAN0BczfE9WtXJ/f53u6HxFO9SG4XrnqQAn1ZzuE5i8mH2fCtAz9/G/IKkZMR8mtCJqkxQrLfYxjjke3INjYUAfAb47MfvRyFLYgAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-14T07:12:25.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "indicator_talib.py",
-              "DocumentMoniker": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\indicator_talib.py",
-              "RelativeDocumentMoniker": "auto\\indicator_talib.py",
-              "ToolTip": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\indicator_talib.py",
-              "RelativeToolTip": "auto\\indicator_talib.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvxYAAAALAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUjSURBVEhLlVVvbBRFFP/t7N5d77jz7LU9amhaS8vfGIxBExKNxKokYIMCKv0ifABEgoSCCEZCQ9LEKjGGCIE2REoUP9hICR\u002BKqUEMikYSEQWKIqRUhLb8u165Y\u002B/P7uz4Zm6vcLWG\u002BEvevnk7M\u002B/N\u002B83btxrug5r\u002B3a2mY8wTVkpnwqnrn9h43p1SaBlqeLg3XfThnof2vey\u002BugshxJgBlsS2VmZsrSvuD0w/fbuYWSILw7ZhcJsblrW\u002Bb\u002Bqmj\u002BW6lnjDYj\u002B01j03S0I9tTsNtXkUCgJsvLJu6fiAtZON8wRPmiU4YpbB0hzonMOwKAAF0bkDL3OOvlraE48Y1sLelA8H4mE8V5Ka8mnZnj9dVyNg8rGpv3F9\u002B40Vt2f6E/ssrgVPXBuHw6kSZMm5JgSY44DogU464jExv/R8XVi3FhZB4GfTj6jOEbbFs8rjKKgMtlxdeyGiZ2vjjgd7V39C3AGORZIVpEmUHmVn5Zr83F1b8ELaVQYezQmlhY60UCYc291s0wa5KW/LsRI6w8jcPTank42C8khEBKXztKMrZ3Jjf/cdDB41carzIprXbiPefWrukUmPYkdLK271JnD2xB9YtuR1dRApCl1DVblBDiqApsGrApDkTy6xefvb\u002BOxgO5YvXoUFz7\u002BCivJKdHd8i2jpeLzUMB9dX3WBrkbtycNb6b/oOT7c6JrQtoqthhiIWXHuwYDtw/crtiteB4\u002BZeHHlHAwOXsPhfd9gV/sOpMwUNq15F1XTKmAmUrnDEPdU7q47wHeRXvh0OEn7tGVbc5hvMF6RP/0Vu6ggg0NtX\u002BPEod8wfHsYre27ER\u002BKI3knCTNJztW9FDpX0OmODQ2sxDvDMLGXpTVeLrlP0SXf4t4cn7RR4p3338Ks\u002BscwY/Y0DMWG0HGgA\u002BHwg2hueg\u002BTa6agaUsTFi1alFvsoiPSjCiPwT4Vh9ZvbmZpboyXp79JFEX1zEhFSJzpOY2enp5ctZAk4kmsXrMKK5evxLmz57BhwwaUlpaqtXnUeU9i6fAhaCl\u002BxFoQ/ZUNc0\u002BtPL0s02cCMTcDgfBUH7774VjOdrOSev/\u002Bz1FcXIzq6mqEQiG0tbW5rnOgG8Dcsl8gDLZd2iwNrSJJGdR4UrghKVIZ5Ep1pMbdrOS7fMX09fUpPRpZKsypwSuC10e6pM0yjl4Vs72KogEuaz3nJCfuB5Z/R4HvB6pa6IxrmcTc6dJmGcHKE46BfipRWaZ5RznJO8/ZwhlVMWNABpAiPOxNabMkZw/E6PTXKQsphfS4FMnxGG1gLCjnaiTq5JNd5f6wsl3k6Uldt5GJc1gmB7ccVe\u002BXLl1yV/03OPVPmSjpGmkzKtGomqEmKDh9gYoWaoAhHbqPURvRRkRWzv0gnbs00b9p7mwGrh1xMh7OM8R/hjr8PRUjx/8XOeeUBWlha8tU7554tuUJ7hi76P4fh8PoMqmrcgNfTO9GQBMIEKtB\u002Bvn4aUw5wUPb5d\u002BWkqKxQIy\u002Bod9pfZDm5boQ6XEkRUJcLvg5VJ/54DVysY2YKxcUaF3ZBdQHb2CCl3oPOaLEqM41ZMh5ivQd\u002Bn4SND5oBUDFglrDQpQ5CNLqIgowgfFYQQCJKcc3hjKRks0QrJFO6cv8XYsIXU/TjO4fXyj\u002Bq9iGNjklmJEPkCTdmQmginFU6pbMUjAher2OZ/XT4Y7ufwXIY\u002BK55kkC3o/My5NmGsHswqtPNfzkTmE4XT8v6\u002BANamdP9jreyE2HiajGB0LA2lmhzi/dZQTgH/DyE3Hn7Qs\u002BAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-02-20T08:47:52.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "backtest.py",
               "DocumentMoniker": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\backtest.py",
               "RelativeDocumentMoniker": "auto\\backtest.py",
               "ToolTip": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\backtest.py",
               "RelativeToolTip": "auto\\backtest.py",
-              "ViewState": "AQIAAJsAAAAAAAAAAAAuwMUAAAAvAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUjSURBVEhLlVVvbBRFFP/t7N5d77jz7LU9amhaS8vfGIxBExKNxKokYIMCKv0ifABEgoSCCEZCQ9LEKjGGCIE2REoUP9hICR\u002BKqUEMikYSEQWKIqRUhLb8u165Y\u002B/P7uz4Zm6vcLWG\u002BEvevnk7M\u002B/N\u002B83btxrug5r\u002B3a2mY8wTVkpnwqnrn9h43p1SaBlqeLg3XfThnof2vey\u002BugshxJgBlsS2VmZsrSvuD0w/fbuYWSILw7ZhcJsblrW\u002Bb\u002Bqmj\u002BW6lnjDYj\u002B01j03S0I9tTsNtXkUCgJsvLJu6fiAtZON8wRPmiU4YpbB0hzonMOwKAAF0bkDL3OOvlraE48Y1sLelA8H4mE8V5Ka8mnZnj9dVyNg8rGpv3F9\u002B40Vt2f6E/ssrgVPXBuHw6kSZMm5JgSY44DogU464jExv/R8XVi3FhZB4GfTj6jOEbbFs8rjKKgMtlxdeyGiZ2vjjgd7V39C3AGORZIVpEmUHmVn5Zr83F1b8ELaVQYezQmlhY60UCYc291s0wa5KW/LsRI6w8jcPTank42C8khEBKXztKMrZ3Jjf/cdDB41carzIprXbiPefWrukUmPYkdLK271JnD2xB9YtuR1dRApCl1DVblBDiqApsGrApDkTy6xefvb\u002BOxgO5YvXoUFz7\u002BCivJKdHd8i2jpeLzUMB9dX3WBrkbtycNb6b/oOT7c6JrQtoqthhiIWXHuwYDtw/crtiteB4\u002BZeHHlHAwOXsPhfd9gV/sOpMwUNq15F1XTKmAmUrnDEPdU7q47wHeRXvh0OEn7tGVbc5hvMF6RP/0Vu6ggg0NtX\u002BPEod8wfHsYre27ER\u002BKI3knCTNJztW9FDpX0OmODQ2sxDvDMLGXpTVeLrlP0SXf4t4cn7RR4p3338Ks\u002BscwY/Y0DMWG0HGgA\u002BHwg2hueg\u002BTa6agaUsTFi1alFvsoiPSjCiPwT4Vh9ZvbmZpboyXp79JFEX1zEhFSJzpOY2enp5ctZAk4kmsXrMKK5evxLmz57BhwwaUlpaqtXnUeU9i6fAhaCl\u002BxFoQ/ZUNc0\u002BtPL0s02cCMTcDgfBUH7774VjOdrOSev/\u002Bz1FcXIzq6mqEQiG0tbW5rnOgG8Dcsl8gDLZd2iwNrSJJGdR4UrghKVIZ5Ep1pMbdrOS7fMX09fUpPRpZKsypwSuC10e6pM0yjl4Vs72KogEuaz3nJCfuB5Z/R4HvB6pa6IxrmcTc6dJmGcHKE46BfipRWaZ5RznJO8/ZwhlVMWNABpAiPOxNabMkZw/E6PTXKQsphfS4FMnxGG1gLCjnaiTq5JNd5f6wsl3k6Uldt5GJc1gmB7ccVe\u002BXLl1yV/03OPVPmSjpGmkzKtGomqEmKDh9gYoWaoAhHbqPURvRRkRWzv0gnbs00b9p7mwGrh1xMh7OM8R/hjr8PRUjx/8XOeeUBWlha8tU7554tuUJ7hi76P4fh8PoMqmrcgNfTO9GQBMIEKtB\u002Bvn4aUw5wUPb5d\u002BWkqKxQIy\u002Bod9pfZDm5boQ6XEkRUJcLvg5VJ/54DVysY2YKxcUaF3ZBdQHb2CCl3oPOaLEqM41ZMh5ivQd\u002Bn4SND5oBUDFglrDQpQ5CNLqIgowgfFYQQCJKcc3hjKRks0QrJFO6cv8XYsIXU/TjO4fXyj\u002Bq9iGNjklmJEPkCTdmQmginFU6pbMUjAher2OZ/XT4Y7ufwXIY\u002BK55kkC3o/My5NmGsHswqtPNfzkTmE4XT8v6\u002BANamdP9jreyE2HiajGB0LA2lmhzi/dZQTgH/DyE3Hn7Qs\u002BAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-02-20T07:35:56.354Z",
+              "ViewState": "AQIAALEAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM5SURBVEhLtVVNSFRRFD7z85yGyZnUYZwxIrGUsCRSSrFFJlQriSCKCBdBLmZTlKCBi8xVzc5NiyREIqJVC6FctCgy6sWggyAVWDOpTaWpozO9mTfv53bue3fGMX3yLPrg45x33r3n3Pvd8\u002B6D/wpCiIW5eXR0dBDmmsXhgYGBMPPXYcMC/f397Glz9PT0SKIoTkuSdBGL8Cy8BlZm/woej4fr6uoq5TjuIS6skYXXwLAAz/OGLITP5yspKNLAwsagEgmCYIq9vb15PxqNLgaDwSmcv4el0vBPElGEQiGNQ0NDJTabzY\u002BhOv2NDjuz6/CnFIVobNTlRmk0m8Pg4GA4EomwJx2GO6BJNmJTUxOg3iAoFphNZCG2mIGltAp2u50euoNNz8NwB0ZYEUS4PfIeYvMrIKRFUGQZKUG52wF9504eGh8f59hQDVvuolhChjIXB6Hz9Sy5zpn5ZRgOf3G0tLTUsBQatiyRqhJ4/eEbdD54A6qiIGXdYpGUkIHi4uLtLIWGTbtIwYmUFqsVwtMpePQuDmPRn3C81g/NNT44UVcBnI2Ow13QIqoKx\u002BoTN0jyGSHS3CheRaWmuijhrob7L6byeq9Ko/t09ZolKoDwSp\u002BUmTwK3s6bpiQamYizVVLSXeX81RiVqrqczsS7UslggY8A8o/Tm0qUw\u002Bx8UltljjZcaaXXBVXlbqjyu2FvwANnmqvgQsMnTCpggTQSbTa\u002B2/A2LZToDi\u002BBLFE5JNhZ4oR77SI4yRS\u002Byd3saKU4Jk8BqCIyiwXQ\u002BrvNdVEF9jiVgEoRbHWBU3qJyb4iMak0CyB\u002BRrvMVo7M7aJo15IpiVoPBPKH6dkmsyhClXQpZJa40HdUA3CBJ6Ykoki7KyG\u002BkIS2g2nwkceYhElRVIu/LbwhCC2MTWl1ocXe3XFqDuzeI6b/aFb8FiwWCxSp2B0Ld/XkVG8FLVHQx3Nw4SVY0X0Lh48ieRyfNCURBf2I6BkQ7KFVrZksZZcBvJdwFU5tLCZ\u002BTpNrvhYpAN0BczfE9WtXJ/f53u6HxFO9SG4XrnqQAn1ZzuE5i8mH2fCtAz9/G/IKkZMR8mtCJqkxQrLfYxjjke3INjYUAfAb47MfvRyFLYgAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-14T07:12:10.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "clear_data.py",
+              "DocumentMoniker": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\clear_data.py",
+              "RelativeDocumentMoniker": "auto\\clear_data.py",
+              "ToolTip": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\clear_data.py",
+              "RelativeToolTip": "auto\\clear_data.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM5SURBVEhLtVVNSFRRFD7z85yGyZnUYZwxIrGUsCRSSrFFJlQriSCKCBdBLmZTlKCBi8xVzc5NiyREIqJVC6FctCgy6sWggyAVWDOpTaWpozO9mTfv53bue3fGMX3yLPrg45x33r3n3Pvd8\u002B6D/wpCiIW5eXR0dBDmmsXhgYGBMPPXYcMC/f397Glz9PT0SKIoTkuSdBGL8Cy8BlZm/woej4fr6uoq5TjuIS6skYXXwLAAz/OGLITP5yspKNLAwsagEgmCYIq9vb15PxqNLgaDwSmcv4el0vBPElGEQiGNQ0NDJTabzY\u002BhOv2NDjuz6/CnFIVobNTlRmk0m8Pg4GA4EomwJx2GO6BJNmJTUxOg3iAoFphNZCG2mIGltAp2u50euoNNz8NwB0ZYEUS4PfIeYvMrIKRFUGQZKUG52wF9504eGh8f59hQDVvuolhChjIXB6Hz9Sy5zpn5ZRgOf3G0tLTUsBQatiyRqhJ4/eEbdD54A6qiIGXdYpGUkIHi4uLtLIWGTbtIwYmUFqsVwtMpePQuDmPRn3C81g/NNT44UVcBnI2Ow13QIqoKx\u002BoTN0jyGSHS3CheRaWmuijhrob7L6byeq9Ko/t09ZolKoDwSp\u002BUmTwK3s6bpiQamYizVVLSXeX81RiVqrqczsS7UslggY8A8o/Tm0qUw\u002Bx8UltljjZcaaXXBVXlbqjyu2FvwANnmqvgQsMnTCpggTQSbTa\u002B2/A2LZToDi\u002BBLFE5JNhZ4oR77SI4yRS\u002Byd3saKU4Jk8BqCIyiwXQ\u002BrvNdVEF9jiVgEoRbHWBU3qJyb4iMak0CyB\u002BRrvMVo7M7aJo15IpiVoPBPKH6dkmsyhClXQpZJa40HdUA3CBJ6Ykoki7KyG\u002BkIS2g2nwkceYhElRVIu/LbwhCC2MTWl1ocXe3XFqDuzeI6b/aFb8FiwWCxSp2B0Ld/XkVG8FLVHQx3Nw4SVY0X0Lh48ieRyfNCURBf2I6BkQ7KFVrZksZZcBvJdwFU5tLCZ\u002BTpNrvhYpAN0BczfE9WtXJ/f53u6HxFO9SG4XrnqQAn1ZzuE5i8mH2fCtAz9/G/IKkZMR8mtCJqkxQrLfYxjjke3INjYUAfAb47MfvRyFLYgAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-14T07:10:47.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "parameter.py",
+              "DocumentMoniker": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\util\\parameter.py",
+              "RelativeDocumentMoniker": "auto\\util\\parameter.py",
+              "ToolTip": "c:\\Users\\24313\\Documents\\GitHub\\qtp\\auto\\util\\parameter.py",
+              "RelativeToolTip": "auto\\util\\parameter.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM5SURBVEhLtVVNSFRRFD7z85yGyZnUYZwxIrGUsCRSSrFFJlQriSCKCBdBLmZTlKCBi8xVzc5NiyREIqJVC6FctCgy6sWggyAVWDOpTaWpozO9mTfv53bue3fGMX3yLPrg45x33r3n3Pvd8\u002B6D/wpCiIW5eXR0dBDmmsXhgYGBMPPXYcMC/f397Glz9PT0SKIoTkuSdBGL8Cy8BlZm/woej4fr6uoq5TjuIS6skYXXwLAAz/OGLITP5yspKNLAwsagEgmCYIq9vb15PxqNLgaDwSmcv4el0vBPElGEQiGNQ0NDJTabzY\u002BhOv2NDjuz6/CnFIVobNTlRmk0m8Pg4GA4EomwJx2GO6BJNmJTUxOg3iAoFphNZCG2mIGltAp2u50euoNNz8NwB0ZYEUS4PfIeYvMrIKRFUGQZKUG52wF9504eGh8f59hQDVvuolhChjIXB6Hz9Sy5zpn5ZRgOf3G0tLTUsBQatiyRqhJ4/eEbdD54A6qiIGXdYpGUkIHi4uLtLIWGTbtIwYmUFqsVwtMpePQuDmPRn3C81g/NNT44UVcBnI2Ow13QIqoKx\u002BoTN0jyGSHS3CheRaWmuijhrob7L6byeq9Ko/t09ZolKoDwSp\u002BUmTwK3s6bpiQamYizVVLSXeX81RiVqrqczsS7UslggY8A8o/Tm0qUw\u002Bx8UltljjZcaaXXBVXlbqjyu2FvwANnmqvgQsMnTCpggTQSbTa\u002B2/A2LZToDi\u002BBLFE5JNhZ4oR77SI4yRS\u002Byd3saKU4Jk8BqCIyiwXQ\u002BrvNdVEF9jiVgEoRbHWBU3qJyb4iMak0CyB\u002BRrvMVo7M7aJo15IpiVoPBPKH6dkmsyhClXQpZJa40HdUA3CBJ6Ykoki7KyG\u002BkIS2g2nwkceYhElRVIu/LbwhCC2MTWl1ocXe3XFqDuzeI6b/aFb8FiwWCxSp2B0Ld/XkVG8FLVHQx3Nw4SVY0X0Lh48ieRyfNCURBf2I6BkQ7KFVrZksZZcBvJdwFU5tLCZ\u002BTpNrvhYpAN0BczfE9WtXJ/f53u6HxFO9SG4XrnqQAn1ZzuE5i8mH2fCtAz9/G/IKkZMR8mtCJqkxQrLfYxjjke3INjYUAfAb47MfvRyFLYgAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-14T07:10:07.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "autojob.py",
               "DocumentMoniker": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\autojob.py",
               "RelativeDocumentMoniker": "autojob.py",
               "ToolTip": "C:\\Users\\24313\\Documents\\GitHub\\qtp\\autojob.py",
               "RelativeToolTip": "autojob.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAASAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUjSURBVEhLlVVvbBRFFP/t7N5d77jz7LU9amhaS8vfGIxBExKNxKokYIMCKv0ifABEgoSCCEZCQ9LEKjGGCIE2REoUP9hICR\u002BKqUEMikYSEQWKIqRUhLb8u165Y\u002B/P7uz4Zm6vcLWG\u002BEvevnk7M\u002B/N\u002B83btxrug5r\u002B3a2mY8wTVkpnwqnrn9h43p1SaBlqeLg3XfThnof2vey\u002BugshxJgBlsS2VmZsrSvuD0w/fbuYWSILw7ZhcJsblrW\u002Bb\u002Bqmj\u002BW6lnjDYj\u002B01j03S0I9tTsNtXkUCgJsvLJu6fiAtZON8wRPmiU4YpbB0hzonMOwKAAF0bkDL3OOvlraE48Y1sLelA8H4mE8V5Ka8mnZnj9dVyNg8rGpv3F9\u002B40Vt2f6E/ssrgVPXBuHw6kSZMm5JgSY44DogU464jExv/R8XVi3FhZB4GfTj6jOEbbFs8rjKKgMtlxdeyGiZ2vjjgd7V39C3AGORZIVpEmUHmVn5Zr83F1b8ELaVQYezQmlhY60UCYc291s0wa5KW/LsRI6w8jcPTank42C8khEBKXztKMrZ3Jjf/cdDB41carzIprXbiPefWrukUmPYkdLK271JnD2xB9YtuR1dRApCl1DVblBDiqApsGrApDkTy6xefvb\u002BOxgO5YvXoUFz7\u002BCivJKdHd8i2jpeLzUMB9dX3WBrkbtycNb6b/oOT7c6JrQtoqthhiIWXHuwYDtw/crtiteB4\u002BZeHHlHAwOXsPhfd9gV/sOpMwUNq15F1XTKmAmUrnDEPdU7q47wHeRXvh0OEn7tGVbc5hvMF6RP/0Vu6ggg0NtX\u002BPEod8wfHsYre27ER\u002BKI3knCTNJztW9FDpX0OmODQ2sxDvDMLGXpTVeLrlP0SXf4t4cn7RR4p3338Ks\u002BscwY/Y0DMWG0HGgA\u002BHwg2hueg\u002BTa6agaUsTFi1alFvsoiPSjCiPwT4Vh9ZvbmZpboyXp79JFEX1zEhFSJzpOY2enp5ctZAk4kmsXrMKK5evxLmz57BhwwaUlpaqtXnUeU9i6fAhaCl\u002BxFoQ/ZUNc0\u002BtPL0s02cCMTcDgfBUH7774VjOdrOSev/\u002Bz1FcXIzq6mqEQiG0tbW5rnOgG8Dcsl8gDLZd2iwNrSJJGdR4UrghKVIZ5Ep1pMbdrOS7fMX09fUpPRpZKsypwSuC10e6pM0yjl4Vs72KogEuaz3nJCfuB5Z/R4HvB6pa6IxrmcTc6dJmGcHKE46BfipRWaZ5RznJO8/ZwhlVMWNABpAiPOxNabMkZw/E6PTXKQsphfS4FMnxGG1gLCjnaiTq5JNd5f6wsl3k6Uldt5GJc1gmB7ccVe\u002BXLl1yV/03OPVPmSjpGmkzKtGomqEmKDh9gYoWaoAhHbqPURvRRkRWzv0gnbs00b9p7mwGrh1xMh7OM8R/hjr8PRUjx/8XOeeUBWlha8tU7554tuUJ7hi76P4fh8PoMqmrcgNfTO9GQBMIEKtB\u002Bvn4aUw5wUPb5d\u002BWkqKxQIy\u002Bod9pfZDm5boQ6XEkRUJcLvg5VJ/54DVysY2YKxcUaF3ZBdQHb2CCl3oPOaLEqM41ZMh5ivQd\u002Bn4SND5oBUDFglrDQpQ5CNLqIgowgfFYQQCJKcc3hjKRks0QrJFO6cv8XYsIXU/TjO4fXyj\u002Bq9iGNjklmJEPkCTdmQmginFU6pbMUjAher2OZ/XT4Y7ufwXIY\u002BK55kkC3o/My5NmGsHswqtPNfzkTmE4XT8v6\u002BANamdP9jreyE2HiajGB0LA2lmhzi/dZQTgH/DyE3Hn7Qs\u002BAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-02-20T07:33:17.615Z",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvx4AAAASAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM5SURBVEhLtVVNSFRRFD7z85yGyZnUYZwxIrGUsCRSSrFFJlQriSCKCBdBLmZTlKCBi8xVzc5NiyREIqJVC6FctCgy6sWggyAVWDOpTaWpozO9mTfv53bue3fGMX3yLPrg45x33r3n3Pvd8\u002B6D/wpCiIW5eXR0dBDmmsXhgYGBMPPXYcMC/f397Glz9PT0SKIoTkuSdBGL8Cy8BlZm/woej4fr6uoq5TjuIS6skYXXwLAAz/OGLITP5yspKNLAwsagEgmCYIq9vb15PxqNLgaDwSmcv4el0vBPElGEQiGNQ0NDJTabzY\u002BhOv2NDjuz6/CnFIVobNTlRmk0m8Pg4GA4EomwJx2GO6BJNmJTUxOg3iAoFphNZCG2mIGltAp2u50euoNNz8NwB0ZYEUS4PfIeYvMrIKRFUGQZKUG52wF9504eGh8f59hQDVvuolhChjIXB6Hz9Sy5zpn5ZRgOf3G0tLTUsBQatiyRqhJ4/eEbdD54A6qiIGXdYpGUkIHi4uLtLIWGTbtIwYmUFqsVwtMpePQuDmPRn3C81g/NNT44UVcBnI2Ow13QIqoKx\u002BoTN0jyGSHS3CheRaWmuijhrob7L6byeq9Ko/t09ZolKoDwSp\u002BUmTwK3s6bpiQamYizVVLSXeX81RiVqrqczsS7UslggY8A8o/Tm0qUw\u002Bx8UltljjZcaaXXBVXlbqjyu2FvwANnmqvgQsMnTCpggTQSbTa\u002B2/A2LZToDi\u002BBLFE5JNhZ4oR77SI4yRS\u002Byd3saKU4Jk8BqCIyiwXQ\u002BrvNdVEF9jiVgEoRbHWBU3qJyb4iMak0CyB\u002BRrvMVo7M7aJo15IpiVoPBPKH6dkmsyhClXQpZJa40HdUA3CBJ6Ykoki7KyG\u002BkIS2g2nwkceYhElRVIu/LbwhCC2MTWl1ocXe3XFqDuzeI6b/aFb8FiwWCxSp2B0Ld/XkVG8FLVHQx3Nw4SVY0X0Lh48ieRyfNCURBf2I6BkQ7KFVrZksZZcBvJdwFU5tLCZ\u002BTpNrvhYpAN0BczfE9WtXJ/f53u6HxFO9SG4XrnqQAn1ZzuE5i8mH2fCtAz9/G/IKkZMR8mtCJqkxQrLfYxjjke3INjYUAfAb47MfvRyFLYgAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-14T07:10:02.625Z",
               "EditorCaption": ""
             }
           ]

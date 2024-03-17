@@ -5,10 +5,11 @@ import traceback
 from auto.indicator_talib import calculate_indicator
 from pybroker import Strategy
 from sqlalchemy import text
-from auto.strategy_content import buy_with_indicator
+from auto.strategy_content import buy_with_indicator,buy_low
 from auto.strategy_chart import create_strategy_charts
+from auto.parameter import database
 
-def execute_backtest(engine):
+def execute_backtest():
     print("开始回测")
     
     datasource = pd.DataFrame()
@@ -17,9 +18,13 @@ def execute_backtest(engine):
     backtest_start_date = pb.param(name='backtest_start_date')
     backtest_end_date = pb.param(name='backtest_end_date')
     initial_cash_value = int(pb.param(name='initial_cash'))
-    
+
+    print('backtest_symbol:', backtest_symbol)
+    print('backtest_start_date:', backtest_start_date)
+    print('backtest_end_date:', backtest_end_date)
     print('initial_cash_value:', initial_cash_value)
     
+    engine = database();
     conn = engine.connect()
     sql = f"SELECT * FROM basic_data_stock_code_akshare WHERE Symbol IN ({backtest_symbol})"
     df = pd.read_sql(text(sql), conn)
@@ -57,7 +62,7 @@ def execute_backtest(engine):
     pb.register_columns('macd')
     pb.register_columns('macdsignal')
     pb.register_columns('macdhist')
-            
+
     '''MFI指标'''
     pb.register_columns('MFI')
     '''CCI指标'''
@@ -79,11 +84,10 @@ def execute_backtest(engine):
     # print(row['Symbol'])
     
     # 设置股票对应的策略
-    #for index,row in df.iterrows():
-        #配置策略执行参数 backtest_symbol
-    strategy.add_execution(buy_with_indicator, symbols=['000012','000333','000623','000756','000951'])
+    strategy.add_execution(buy_low, symbols=['000012','000333','000623','000756','000951'])
     
-
+    #strategy.add_execution(buy_with_indicator, symbols=['000012','000333','000623','000756','000951'])
+    
     # 执行回测，并打印出回测结果的度量值（四舍五入到小数点后四位）
     result = strategy.backtest()
     print(result.metrics_df.round(2))
@@ -91,7 +95,7 @@ def execute_backtest(engine):
     
     trade_count=0
     initial_market_value=0
-            
+
     for index,row in return_order_metrics.iterrows():
         name = row['name']
         value = row['value']
@@ -179,25 +183,31 @@ def execute_backtest(engine):
                 
     conn.execute(insertsql)
     conn.commit()
-            
+
+    # 显示所有列
+    pd.set_option('display.max_columns',None)
+    # 显示所有行
+    pd.set_option('display.max_rows',None)
+
     return_order_df = result.orders
-    return_order_df.to_sql(name="return_order", con=conn, index=False ,if_exists='append')
+    return_order_df.to_sql(name="return_order", con=conn, index=True ,if_exists='append')
     conn.commit()
+    print(return_order_df)
     
     return_positions_df = result.positions
-    return_positions_df.to_sql(name="return_positions", con=conn, index=False ,if_exists='append')
+    return_positions_df.to_sql(name="return_positions", con=conn, index=True ,if_exists='append')
     conn.commit()
     print(return_positions_df)
 
     return_portfolio_df = result.portfolio
-    return_portfolio_df.to_sql(name="return_portfolio", con=conn, index=False ,if_exists='append')
+    return_portfolio_df.to_sql(name="return_portfolio", con=conn, index=True ,if_exists='append')
     conn.commit()
     print(return_portfolio_df)
         
     return_trades_df = result.trades
-    return_trades_df.to_sql(name="return_trades", con=conn, index=False ,if_exists='append')
+    return_trades_df.to_sql(name="return_trades", con=conn, index=True ,if_exists='append')
     conn.commit()
     print(return_trades_df)   
   
     #创建图表
-    create_strategy_charts(data_with_indicator,result,pageName)
+    create_strategy_charts(data_with_indicator,result)

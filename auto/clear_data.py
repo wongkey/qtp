@@ -1,4 +1,5 @@
 from sqlalchemy import text
+from auto.parameter import database
 
 def clear_basic_data(engine):
     try:
@@ -56,10 +57,10 @@ def clear_basic_data(engine):
     else:
         print('清除数据完成')
         
-def clear_backtest_data(engine):
+def clear_backtest_data():
     try:
         print('开始清除回测数据')
-        
+        engine = database();
         conn = engine.connect()
 
         sql00 = text("DELETE FROM return_metrics")

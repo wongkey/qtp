@@ -11,11 +11,11 @@ from auto.stock_data import get_stock_data
 #数据库连接参数
 hostname = "localhost" #数据库IP
 dbname = "qtp" #数据库名
-uname = "root" #用户名
-pwd = "ASDFqwer1234" #密码
+username = "root" #用户名
+password = "ASDFqwer1234" #密码
 
 print("开始采集初始化数据程序")
-engine = create_engine('mysql+pymysql://' + uname + ':' + pwd + '@' + hostname + '/' + dbname + '', future=True)
+engine = create_engine('mysql+pymysql://' + username + ':' + password + '@' + hostname + '/' + dbname + '', future=True)
 
 #获取公共参数
 get_init_parameters(engine)
